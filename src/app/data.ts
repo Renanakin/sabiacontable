@@ -173,7 +173,7 @@ export const teamData: TeamMember[] = [
     shortDesc: "Contador Auditor y Magíster en Tributaria con más de 18 años de experiencia liderando estrategias financieras y optimización fiscal corporativa.",
     bio: "### Nuestra Forma de Trabajar\nBuscamos ser el socio estratégico clave de nuestros clientes, garantizando el cumplimiento estricto de la normativa tributaria y financiera vigente mediante una gestión transparente y proactiva.\n\n### Mi Rol en Sabia Contable\nLidero el diseño de soluciones contables, tributarias y laborales complejas, asegurando que cada pyme y profesional reciba una asesoría estratégica y personalizada adaptada a sus objetivos de negocio.\n\n### Competencia Profesional\nCon una destacada trayectoria en contabilidad, planificación tributaria, control de gestión y finanzas corporativas en sectores comerciales, industriales y de servicios. Su enfoque combina un sólido dominio teórico y práctico, orientado a maximizar la eficiencia y mitigar riesgos normativos.",
     linkedin: "https://www.linkedin.com/in/jorge-ernesto-astorga-mendez-1a53b956/",
-    image: "/images/equipo/jorge.jpeg"
+    image: "/images/equipo/jorge.webp"
   },
   {
     id: "lizbet",
@@ -181,7 +181,7 @@ export const teamData: TeamMember[] = [
     role: "Analista Contable",
     shortDesc: "Especialista en cumplimiento tributario mensual, reportería financiera y gestión integral de nóminas con enfoque en control de precisión.",
     bio: "### Nuestra Forma de Trabajar\nTrabajamos con rigurosidad técnica, empatía y cercanía. Nos enfocamos en simplificar la complejidad de los procesos contables y laborales para ofrecer tranquilidad operativa y claridad financiera a nuestros clientes.\n\n### Mi Rol en Sabia Contable\nResponsable de estructurar y supervisar el cumplimiento fiscal mensual (F29) y anual de las carteras de clientes, brindando soporte continuo en remuneraciones, PreviRed y conciliaciones bancarias.\n\n### Competencia Profesional\nProfesional con alta orientación al detalle, capacidad analítica y dominio de la legislación contable y laboral chilena. Especialista en la resolución ágil de requerimientos y optimización de procesos de información interna.",
-    image: "/images/equipo/lizbet.jpeg"
+    image: "/images/equipo/lisbet.webp"
   },
   {
     id: "daphnee",
@@ -189,7 +189,7 @@ export const teamData: TeamMember[] = [
     role: "Asistente de Gestión",
     shortDesc: "Soporte operativo y coordinación documental para mantener la información de clientes ordenada y al día.",
     bio: "### Nuestra Forma de Trabajar\nAcompañamos cada proceso con orden, trazabilidad y respuesta oportuna.\n\n### Mi Rol en Sabia Contable\nCoordino la recepción y seguimiento de antecedentes contables y laborales para asegurar continuidad operativa.\n\n### Competencia Profesional\nFuerte foco en organización, control de documentación y atención cercana a clientes en procesos administrativos.",
-    image: "/images/equipo/Daphnee.jpeg"
+    image: "/images/equipo/daphnee.webp"
   },
   {
     id: "ketherine",
@@ -197,7 +197,7 @@ export const teamData: TeamMember[] = [
     role: "Analista de Apoyo",
     shortDesc: "Apoyo en procesos de conciliación, control de respaldos y preparación de reportes para clientes pyme.",
     bio: "### Nuestra Forma de Trabajar\nCombinamos precisión técnica y cercanía para resolver requerimientos con rapidez.\n\n### Mi Rol en Sabia Contable\nParticipo en la preparación y validación de información contable para procesos mensuales y cierres.\n\n### Competencia Profesional\nPerfil analítico orientado al detalle, cumplimiento de plazos y mejora continua de flujos de trabajo internos.",
-    image: "/images/equipo/Ketherine.jpeg"
+    image: "/images/equipo/katherine.webp"
   }
 ];
 
