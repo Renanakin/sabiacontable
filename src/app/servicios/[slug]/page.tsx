@@ -1,11 +1,51 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import { CheckCircle2, ChevronLeft, PhoneCall, Check } from "lucide-react";
 import { servicesData } from "@/app/data";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const service = servicesData.find((s) => s.slug === slug);
+
+  if (!service) {
+    return { title: "Servicio no encontrado | Sabia Contable" };
+  }
+
+  return {
+    title: `${service.title} para Pymes en Chile | Sabia Contable`,
+    description: service.shortDescription,
+    openGraph: {
+      title: `${service.title} | Sabia Contable`,
+      description: service.shortDescription,
+      url: `https://sabiacontable.cl/servicios/${service.slug}`,
+      images: [{ url: service.image, width: 800, height: 600, alt: service.title }],
+    },
+  };
+}
+
+// Simple helper to parse our markdown-like seoLongTailContent
+function renderSeoContent(content: string) {
+  const blocks = content.split("\n\n");
+  return blocks.map((block, i) => {
+    if (block.startsWith("### ")) {
+      return (
+        <h3 key={i} className="text-xl font-bold text-white mt-8 mb-4">
+          {block.replace("### ", "")}
+        </h3>
+      );
+    }
+    return (
+      <p key={i} className="text-slate-300 leading-relaxed mb-4">
+        {block}
+      </p>
+    );
+  });
 }
 
 export default async function ServiceDetail({ params }: ServicePageProps) {
@@ -23,7 +63,7 @@ export default async function ServiceDetail({ params }: ServicePageProps) {
         <div>
           <Link
             href="/servicios"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#d80073] hover:text-[#ff389d] transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#E30080] hover:text-[#ff389d] transition-colors"
           >
             <ChevronLeft size={16} />
             Ver todos los servicios
@@ -31,10 +71,10 @@ export default async function ServiceDetail({ params }: ServicePageProps) {
         </div>
 
         {/* Hero del Servicio */}
-        <div className="flex flex-col md:flex-row gap-8 items-center bg-[#0b2545]/40 p-8 rounded-2xl border border-white/5">
+        <div className="flex flex-col md:flex-row gap-8 items-center bg-[#0E273B] p-8 rounded-2xl border border-white/5">
           <div className="space-y-4 flex-1">
-            <span className="text-[#d80073] text-sm font-semibold tracking-wider uppercase">Soluciones Personalizadas</span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl min-[1920px]:text-6xl font-extrabold text-white tracking-tight">
+            <span className="text-[#E30080] text-sm font-semibold tracking-wider uppercase">Soluciones Personalizadas</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               {service.title}
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed">
@@ -48,28 +88,35 @@ export default async function ServiceDetail({ params }: ServicePageProps) {
 
         {/* Contenido Detallado */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-4">
-          {/* Bullets de Procesos */}
-          <div className="md:col-span-2 space-y-6">
-            <h3 className="text-xl font-bold text-white border-b border-white/5 pb-2">
-              ¿Qué incluye este servicio?
-            </h3>
-            <ul className="space-y-4">
-              {service.bullets.map((bullet, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-slate-300">
-                  <CheckCircle2 size={18} className="text-[#d80073] shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base leading-relaxed">{bullet}</span>
-                </li>
-              ))}
-            </ul>
+          {/* SEO Content y Bullets */}
+          <div className="md:col-span-2 space-y-8">
+            {/* Contenido SEO Long-Tail */}
+            {service.seoLongTailContent && (
+              <div className="prose-custom">
+                {renderSeoContent(service.seoLongTailContent)}
+              </div>
+            )}
+
+            <div className="space-y-6 pt-4 border-t border-white/5">
+              <h3 className="text-xl font-bold text-white">¿Qué incluye este servicio?</h3>
+              <ul className="space-y-4">
+                {service.bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-slate-300">
+                    <CheckCircle2 size={18} className="text-[#E30080] shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Características Clave / Valor Agregado */}
-          <div className="bg-[#0b2545] p-6 rounded-2xl border border-white/5 h-fit space-y-6">
+          <div className="bg-[#0E273B] p-6 rounded-2xl border border-white/5 h-fit space-y-6 sticky top-24">
             <h4 className="font-bold text-white text-base">Diferenciadores Sabia</h4>
             <ul className="space-y-3.5">
               {service.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center gap-2.5 text-xs text-slate-300">
-                  <div className="p-1 rounded-md bg-[#d80073]/10 text-[#d80073]">
+                  <div className="p-1 rounded-md bg-[#E30080]/10 text-[#E30080]">
                     <Check size={12} />
                   </div>
                   <span>{feature}</span>
@@ -79,7 +126,7 @@ export default async function ServiceDetail({ params }: ServicePageProps) {
             <div className="pt-2">
               <Link
                 href="/contacto"
-                className="btn-interactive w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#d80073] hover:bg-[#b0005d] text-white text-sm font-bold shadow-lg shadow-[#d80073]/20"
+                className="btn-interactive w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#E30080] hover:bg-[#c2006d] text-white text-sm font-bold shadow-lg shadow-[#E30080]/20"
               >
                 <PhoneCall size={16} />
                 Agendar Consulta
@@ -92,7 +139,6 @@ export default async function ServiceDetail({ params }: ServicePageProps) {
   );
 }
 
-// Pre-renderizar rutas dinámicas al construir (Static Site Generation para máxima velocidad y SEO)
 export async function generateStaticParams() {
   return servicesData.map((service) => ({
     slug: service.slug,

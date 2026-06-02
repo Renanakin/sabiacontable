@@ -2,22 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Briefcase, Calculator, Phone } from "lucide-react";
+import { navItems } from "../core/NavigationModel";
 
-export default function BottomNavigationBar() {
+export default function BottomNavMobile() {
   const pathname = usePathname();
 
-  const navItems = [
-    { label: "Inicio", path: "/", icon: Home },
-    { label: "Servicios", path: "/servicios", icon: Briefcase },
-    { label: "Utilitarios", path: "/utilitarios", icon: Calculator },
-    { label: "Contacto", path: "/contacto", icon: Phone },
-  ];
+  const bottomNavItems = navItems.filter((item) => item.showInBottomNav);
 
   return (
     <nav className="fixed bottom-4 left-4 right-4 z-50 md:hidden bg-[#032D42]/90 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl px-6 py-3">
       <div className="flex justify-between items-center">
-        {navItems.map((item) => {
+        {bottomNavItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.path || (item.path !== "/" && pathname.startsWith(item.path));
 
@@ -44,4 +39,3 @@ export default function BottomNavigationBar() {
     </nav>
   );
 }
-

@@ -35,6 +35,11 @@ export const servicesData: ServiceItem[] = [
       "Asignación de analista dedicado",
       "Reuniones de revisión mensual"
     ],
+    seoLongTailContent: `### ¿Por qué externalizar tu contabilidad con expertos?
+Llevar la contabilidad interna consume recursos valiosos y aumenta el riesgo de errores tributarios. Nuestro servicio de contabilidad integral en Chile está diseñado para que tu pyme mantenga sus finanzas en orden sin esfuerzo.
+
+### Nuestro proceso contable mensual
+Nos conectamos directamente con tus plataformas de facturación para automatizar la captura de datos. Desde la centralización de compras y ventas hasta el análisis de ratios financieros, cubrimos todo el espectro para que puedas presentar balances impecables ante bancos y accionistas.`,
     image: "/images/contabilidad.png"
   },
   {
@@ -53,6 +58,11 @@ export const servicesData: ServiceItem[] = [
       "Portal auto-consulta para trabajadores",
       "Asesoría legal laboral integrada"
     ],
+    seoLongTailContent: `### Evita multas de la Dirección del Trabajo
+El cálculo incorrecto de sueldos, finiquitos o cotizaciones en PreviRed puede resultar en graves penalizaciones. Delegar la gestión de remuneraciones asegura precisión técnica y cumplimiento normativo.
+
+### Soluciones completas para Recursos Humanos
+No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacción de anexos de contratos, control de vacaciones, cálculo de horas extras y representación ante fiscalizaciones, brindando soporte integral a tu área de recursos humanos.`,
     image: "/images/remuneraciones.png"
   },
   {
@@ -71,6 +81,11 @@ export const servicesData: ServiceItem[] = [
       "Defensa y representación ante el SII",
       "Monitoreo constante de cambios normativos"
     ],
+    seoLongTailContent: `### Estrategia y Planificación Tributaria en Chile
+Pagar más impuestos de lo justo por desconocimiento de las franquicias legales es un error común. Nuestros expertos tributarios analizan el régimen fiscal de tu empresa para aplicar estrategias legales de ahorro y eficiencia.
+
+### Declaraciones de Renta sin contratiempos
+La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extremo. Nos adelantamos a los plazos del SII para detectar discrepancias, realizar el cruce de información y garantizar una declaración libre de contingencias o fiscalizaciones sorpresivas.`,
     image: "/images/tributaria.png"
   },
   {
@@ -89,6 +104,11 @@ export const servicesData: ServiceItem[] = [
       "Asesoría en elección del régimen tributario",
       "Tramitación de patente comercial"
     ],
+    seoLongTailContent: `### Emprende con bases sólidas desde el día 1
+Constituir una empresa requiere elegir la figura societaria correcta (SpA, EIRL, Limitada) y el régimen tributario adecuado. Una mala elección inicial puede costar millones en impuestos futuros. Nosotros te asesoramos paso a paso.
+
+### Más que 'Tu Empresa en un Día'
+Si bien la plataforma del Estado facilita el registro, el proceso real incluye inicio de actividades, acreditación de domicilio, verificación de actividades ante el SII y obtención de patentes municipales. Nos encargamos de todo el ecosistema burocrático para que empieces a facturar rápidamente.`,
     image: "/images/creacion.png"
   },
   {
@@ -107,10 +127,43 @@ export const servicesData: ServiceItem[] = [
       "Análisis profundo de brechas contables",
       "Propuestas de mejora interna"
     ],
+    seoLongTailContent: `### Transparencia que genera confianza
+Una auditoría financiera externa valida la veracidad de tus estados financieros. Es una herramienta indispensable si buscas rondas de inversión, créditos bancarios de alto volumen o si hay reestructuración de socios en la empresa.
+
+### Detección de riesgos y mejora de procesos operativos
+Más allá de certificar los números, nuestra auditoría bajo normas IFRS revisa tu sistema de control interno. Identificamos puntos vulnerables al fraude, ineficiencias en el flujo de caja y entregamos reportes accionables para mejorar la salud corporativa de tu pyme.`,
     image: "/images/auditoria.png"
   }
 ];
 
+export const homeStats = [
+  { value: 10, stringValue: "10+", suffix: "+", label: "Años de exp." },
+  { value: 17, stringValue: "17", suffix: "", label: "Clientes" },
+  { value: 5, stringValue: "5", suffix: "", label: "Expertos" },
+];
+
+export const homeFeatures = [
+  {
+    title: "Flexibilidad Total",
+    desc: "Planes escalables y adaptados al volumen real de transacciones de tu pyme.",
+    iconName: "TrendingUp",
+  },
+  {
+    title: "Soporte Continuo",
+    desc: "Resolución de dudas y asesoría directa a través de canales dedicados y reuniones mensuales.",
+    iconName: "Users",
+  },
+  {
+    title: "Compromiso Ético",
+    desc: "Garantía de cumplimiento riguroso de normativas tributarias y plazos del SII.",
+    iconName: "ShieldCheck",
+  },
+  {
+    title: "Gestión Inteligente",
+    desc: "Reportería financiera clara para la toma de decisiones empresariales estratégicas.",
+    iconName: "Landmark",
+  },
+];
 export const teamData: TeamMember[] = [
   {
     id: "jorge",
@@ -147,3 +200,39 @@ export const teamData: TeamMember[] = [
   }
 ];
 
+export const testimonialsData = [
+  {
+    quote: "Delegar nuestra contabilidad en Sabia fue la mejor decisión. Ya no nos preocupamos por fechas de pago de impuestos o multas del SII, ellos se adelantan a todo.",
+    author: "María Paz Rodríguez",
+    role: "CEO en TechCorp Chile"
+  },
+  {
+    quote: "La claridad de los reportes mensuales me permite saber exactamente la rentabilidad de mi negocio. El equipo de Jorge Astorga es extremadamente profesional.",
+    author: "Roberto Silva",
+    role: "Fundador de Inversiones RS"
+  },
+  {
+    quote: "Nos ayudaron a ordenar la contabilidad de 3 años atrás que un contador anterior dejó incompleta. Excelente servicio de auditoría y regularización.",
+    author: "Camila Fuentes",
+    role: "Directora en SaludPro"
+  }
+];
+
+export const faqsData = [
+  {
+    question: "¿Qué tipo de empresas asesoran?",
+    answer: "Nos especializamos en pequeñas y medianas empresas (pymes) de diversos sectores, así como en profesionales independientes que requieran contabilidad completa y asesoría tributaria avanzada."
+  },
+  {
+    question: "¿Debo cambiar de sistema de facturación?",
+    answer: "No es estrictamente necesario. Nos integramos y descargamos la información directamente del portal del Servicio de Impuestos Internos (SII) o de tu ERP actual."
+  },
+  {
+    question: "¿Realizan la gestión de imposiciones (PreviRed)?",
+    answer: "Sí. Dentro de nuestro servicio de Gestión de Remuneraciones, calculamos y declaramos las imposiciones mensuales de tus trabajadores en PreviRed para evitar multas de la Inspección del Trabajo."
+  },
+  {
+    question: "¿Tengo un analista asignado para mi empresa?",
+    answer: "Por supuesto. Cada cliente tiene un analista contable de cabecera encargado de su cuenta, lo que garantiza una comunicación fluida y respuestas rápidas a cualquier requerimiento."
+  }
+];
