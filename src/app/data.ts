@@ -15,6 +15,7 @@ export interface ServiceItem {
   fullDescription: string;
   bullets: string[];
   features: string[];
+  seoLongTailContent?: string;
   image: string;
 }
 
