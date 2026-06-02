@@ -79,11 +79,11 @@ export default function HeroDesktop() {
             Asesoría Contable Premium
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl min-[1920px]:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            Claridad Contable para <br />
-            <span className="text-[#E30080]">Decisiones Inteligentes</span>
+            Tranquilidad para que <br />
+            <span className="text-[#E30080]">Enfoques en Crecer</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl min-[1920px]:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-            Evita multas tributarias y simplifica la gestión de tus trabajadores. Ofrecemos contabilidad mensual rigurosa y asesoría experta directa para pymes y profesionales en Chile.
+            Más que un servicio contable, un equipo dedicado a tu tranquilidad. Te acompañamos en cada etapa de tu crecimiento con asesoría especializada y planes transparentes, para que tú solo te enfoques en hacer brillar tu negocio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link

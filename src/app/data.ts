@@ -22,7 +22,7 @@ export const servicesData: ServiceItem[] = [
   {
     slug: "contabilidad-integral",
     title: "Contabilidad Integral",
-    shortDescription: "Procesamiento, registro y conciliación de transacciones comerciales con reportes periódicos claros.",
+    shortDescription: "Mantén tu contabilidad al día y 100% clara. Te asignamos un analista dedicado que conoce la realidad de tu empresa, brindándote reportes precisos y apoyo humano constante para la toma de decisiones.",
     fullDescription: "Nos encargamos del ciclo completo de tu contabilidad para que puedas enfocarte en hacer crecer tu negocio sin preocuparte del papeleo. Conciliamos tus cuentas y mantenemos tus libros actualizados bajo la normativa vigente.",
     bullets: [
       "Registro diario de compras y ventas.",
@@ -45,7 +45,7 @@ Nos conectamos directamente con tus plataformas de facturación para automatizar
   {
     slug: "gestion-de-remuneraciones",
     title: "Gestión de Remuneraciones",
-    shortDescription: "Cálculo de sueldos, preparación de liquidaciones, contratos, finiquitos e imposiciones de PreviRed.",
+    shortDescription: "Cuidamos del motor de tu empresa: tu equipo. Gestionamos de forma integral nóminas, contratos y finiquitos, adaptándonos al ritmo de tu crecimiento con procesos eficientes y respaldo legal.",
     fullDescription: "Administramos tu personal de manera eficiente y transparente, asegurando el cumplimiento estricto de la legislación laboral chilena y evitando multas de la Dirección del Trabajo.",
     bullets: [
       "Confección de liquidaciones de sueldo.",
@@ -68,7 +68,7 @@ No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacció
   {
     slug: "gestion-tributaria",
     title: "Gestión Tributaria",
-    shortDescription: "Planificación fiscal, declaración mensual de impuestos (F29) y proceso anual de Operación Renta.",
+    shortDescription: "Planificamos tu futuro tributario con visión estratégica. Diseñamos un marco de cumplimiento sólido que optimiza tus recursos y protege tu patrimonio, siempre dentro del marco legal vigente.",
     fullDescription: "Optimizamos tu carga tributaria de manera legal y ética. Nos encargamos de presentar tus impuestos en las fechas correspondientes para evitar multas o reparos por parte del SII.",
     bullets: [
       "Declaración mensual de impuestos (Formulario 29).",
@@ -144,18 +144,18 @@ export const homeStats = [
 
 export const homeFeatures = [
   {
-    title: "Flexibilidad Total",
-    desc: "Planes escalables y adaptados al volumen real de transacciones de tu pyme.",
+    title: "Planes Flexibles y Transparentes",
+    desc: "Creemos en las relaciones de largo plazo. Nuestros servicios integrales están diseñados para acompañar tu volumen operativo mes a mes, brindándote certeza y claridad desde el primer día, sin costos imprevistos.",
     iconName: "TrendingUp",
   },
   {
-    title: "Soporte Continuo",
-    desc: "Resolución de dudas y asesoría directa a través de canales dedicados y reuniones mensuales.",
+    title: "Tu Analista Personalizado",
+    desc: "Tu tranquilidad es nuestra prioridad. Contarás con un profesional cercano y siempre dispuesto a escucharte, asegurando que tu negocio reciba la atención detallada que merece.",
     iconName: "Users",
   },
   {
-    title: "Compromiso Ético",
-    desc: "Garantía de cumplimiento riguroso de normativas tributarias y plazos del SII.",
+    title: "Revisión Preventiva Continua",
+    desc: "No esperamos a fin de mes para actuar. Monitoreamos constantemente tu situación ante el SII y otras entidades para garantizar que tu cumplimiento sea impecable.",
     iconName: "ShieldCheck",
   },
   {
@@ -201,6 +201,11 @@ export const teamData: TeamMember[] = [
 ];
 
 export const testimonialsData = [
+  {
+    quote: "Desde que trabajamos con Sabia Contable, sentimos un verdadero alivio. No solo tienen todo bajo control y al día, sino que siempre hay una persona amable dispuesta a resolver nuestras dudas. Sentimos que realmente son parte de nuestra empresa.",
+    author: "Ricardo Valdés",
+    role: "Director de Empresa de Servicios"
+  },
   {
     quote: "Delegar nuestra contabilidad en Sabia fue la mejor decisión. Ya no nos preocupamos por fechas de pago de impuestos o multas del SII, ellos se adelantan a todo.",
     author: "María Paz Rodríguez",
