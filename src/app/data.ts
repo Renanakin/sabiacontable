@@ -139,7 +139,7 @@ Más allá de certificar los números, nuestra auditoría bajo normas IFRS revis
 
 export const homeStats = [
   { value: 10, stringValue: "10+", suffix: "+", label: "Años de exp." },
-  { value: 17, stringValue: "17", suffix: "", label: "Clientes" },
+  { value: 100, stringValue: "100", suffix: "+", label: "Clientes" },
   { value: 5, stringValue: "5", suffix: "", label: "Expertos" },
 ];
 

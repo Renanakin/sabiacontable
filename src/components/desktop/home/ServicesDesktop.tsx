@@ -18,7 +18,7 @@ export default function ServicesDesktop() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-          {servicesData.slice(0, 3).map((service) => (
+          {servicesData.map((service) => (
             <div key={service.slug} className="card-spotlight rounded-2xl p-8 flex flex-col justify-between h-full">
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-white">{service.title}</h3>

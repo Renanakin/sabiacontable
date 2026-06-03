@@ -12,7 +12,7 @@ export default function ServicesMobile() {
         <p className="text-slate-400 text-sm">Soluciones adaptadas a la medida de tu negocio, con acompañamiento constante.</p>
       </div>
       <div className="flex flex-col gap-6">
-        {servicesData.slice(0, 3).map((service) => (
+        {servicesData.map((service) => (
           <div key={service.slug} className="bg-[#0E273B] rounded-2xl p-6 border border-white/5">
             <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
             <p className="text-sm text-slate-400 mb-5">{service.shortDescription}</p>

@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, CheckCircle2, MessageCircle, AlertCircle, Loader2 } from "lucide-react";
+import { useMindicador } from "@/hooks/useMindicador";
 
 export default function Contacto() {
+  const indicators = useMindicador();
+
+  const formatCurrency = (val: number) => {
+    return new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 2 }).format(val);
+  };
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -236,17 +242,23 @@ export default function Contacto() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-[#0b2545]/40 p-6 rounded-2xl border border-white/5 text-center space-y-1">
               <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Unidad de Fomento (UF)</span>
-              <p className="text-base font-semibold text-white">Consultar valor vigente</p>
+              <p className="text-base font-semibold text-white">
+                {indicators.loading ? "Cargando..." : formatCurrency(indicators.uf)}
+              </p>
               <a className="text-xs text-[#d80073] hover:underline" href="https://www.bcentral.cl/" target="_blank" rel="noopener noreferrer">Banco Central de Chile</a>
             </div>
             <div className="bg-[#0b2545]/40 p-6 rounded-2xl border border-white/5 text-center space-y-1">
               <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Unidad Tributaria Mensual (UTM)</span>
-              <p className="text-base font-semibold text-white">Consultar valor vigente</p>
+              <p className="text-base font-semibold text-white">
+                {indicators.loading ? "Cargando..." : formatCurrency(indicators.utm)}
+              </p>
               <a className="text-xs text-[#d80073] hover:underline" href="https://www.sii.cl/" target="_blank" rel="noopener noreferrer">Servicio de Impuestos Internos</a>
             </div>
             <div className="bg-[#0b2545]/40 p-6 rounded-2xl border border-white/5 text-center space-y-1">
               <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Dólar Observado</span>
-              <p className="text-base font-semibold text-white">Consultar valor vigente</p>
+              <p className="text-base font-semibold text-white">
+                {indicators.loading ? "Cargando..." : formatCurrency(indicators.dolar)}
+              </p>
               <a className="text-xs text-[#d80073] hover:underline" href="https://www.bcentral.cl/" target="_blank" rel="noopener noreferrer">Banco Central de Chile</a>
             </div>
           </div>

@@ -8,8 +8,8 @@ export default function BoletaHonorarios() {
   const [monto, setMonto] = useState<string>("");
   const [tipo, setTipo] = useState<"bruto" | "liquido">("bruto");
 
-  // Tasa de retención de Boletas de Honorarios para el año 2024 / 2025 en Chile: 13.75%
-  const tasaRetencion = 0.1375;
+  // Tasa de retención de Boletas de Honorarios para el año 2026 en Chile: 15.25%
+  const tasaRetencion = 0.1525;
 
   const numMonto = parseFloat(monto) || 0;
 
@@ -48,7 +48,7 @@ export default function BoletaHonorarios() {
         {/* Encabezado */}
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#d80073]/10 border border-[#d80073]/20 text-xs font-semibold text-[#d80073] tracking-wide uppercase">
-            Cálculo Oficial 13.75%
+            Cálculo Oficial 15.25%
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Calculadora de Boletas de Honorarios
@@ -120,7 +120,7 @@ export default function BoletaHonorarios() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-slate-400 flex items-center gap-1">
-                    Retención SII (13.75%):
+                    Retención SII (15.25%):
                   </span>
                   <span className="font-semibold text-white">{formatCurrency(retencion)}</span>
                 </div>

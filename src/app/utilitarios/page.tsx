@@ -16,9 +16,9 @@ export default function Utilitarios() {
       icon: FileText,
     },
     {
-      title: "Liquidación de Sueldo",
-      desc: "Calcula los aportes previsionales obligatorios de AFP y Salud para estimar tu sueldo líquido.",
-      href: "/utilitarios/liquidacion-sueldo",
+      title: "Calculadora de Sueldo Líquido",
+      desc: "Simula tu liquidación de sueldo o la de tus trabajadores con los valores legales vigentes para Chile 2024.",
+      href: "/utilitarios/calculadora-sueldos",
       icon: Users,
     },
   ];

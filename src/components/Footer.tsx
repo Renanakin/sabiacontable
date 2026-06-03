@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
+import FinancialBar from "./FinancialBar";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#021824] border-t border-white/5 text-slate-400 py-14 sm:py-16 lg:py-20 pb-28 md:pb-16">
-      <div className="site-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 lg:gap-12">
+    <footer className="bg-[#021824] border-t border-white/5 text-slate-400 pt-14 sm:pt-16 lg:pt-20">
+      <div className="site-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 lg:gap-12 pb-10">
         {/* Columna 1: Branding y Descripción */}
         <div className="space-y-4">
           <Image
@@ -121,19 +122,31 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="site-container border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm">
-        <p>&copy; {new Date().getFullYear()} Sabia Contable. Todos los derechos reservados.</p>
-        <div className="flex gap-6">
-          <Link href="/terminos" className="hover:text-white transition-colors">Términos de Servicio</Link>
-          <Link href="/privacidad" className="hover:text-white transition-colors">Política de Privacidad</Link>
+      <FinancialBar />
+
+      <div className="bg-[#010e15] border-t border-white/5 py-4 pb-20 md:pb-4">
+        <div className="site-container flex flex-col md:flex-row justify-between items-center gap-6 text-xs sm:text-sm">
+          <p className="text-center md:text-left">&copy; {new Date().getFullYear()} Sabia Contable. Todos los derechos reservados.</p>
+          
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <Link href="/terminos" className="hover:text-white transition-colors">Términos de Servicio</Link>
+            <Link href="/privacidad" className="hover:text-white transition-colors">Política de Privacidad</Link>
+          </div>
+
+          <a 
+            href="https://www.hackteck.cl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-1 transition-all duration-300 hover:-translate-y-1"
+          >
+            <span className="text-[9px] uppercase tracking-[0.2em] text-slate-500 font-light group-hover:text-slate-300 transition-colors">
+              Diseñado por
+            </span>
+            <span className="text-xs font-bold tracking-[0.3em] whitespace-nowrap bg-black/20 px-4 py-1.5 rounded-full border border-white/5 group-hover:border-[#4169e1]/40 group-hover:shadow-[0_0_15px_rgba(65,105,225,0.15)] transition-all">
+              <span className="text-white">HACK</span><span className="text-[#4169e1]">TECK</span>
+            </span>
+          </a>
         </div>
-      </div>
-      <div className="site-container mt-6 flex justify-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[11px] sm:text-xs tracking-wide text-slate-300">
-          <span className="text-[#d80073] font-semibold">Hackteck</span>
-          <span className="text-slate-400">·</span>
-          <span>Desarrollo, implementación y despliegue</span>
-        </p>
       </div>
     </footer>
   );
