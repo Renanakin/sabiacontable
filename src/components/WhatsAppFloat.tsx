@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function WhatsAppFloat() {
-  const whatsappNumber = "56912345678"; // Reemplazar con el número real de WhatsApp
+  const whatsappNumber = "56982223173"; // Número oficial de Sabia Contable
   const message = "Hola! Me gustaría hacer una consulta sobre los servicios de Sabia Contable.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

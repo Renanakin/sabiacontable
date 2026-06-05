@@ -75,10 +75,10 @@ export default function HeroMobile() {
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight text-white leading-tight">
           Tranquilidad para que <br />
-          <span className="text-[#E30080]">Enfoques en Crecer</span>
+          <span className="text-[#E30080]">Te Enfoques en Crecer</span>
         </h1>
         <p className="text-base text-slate-300 leading-relaxed">
-          Más que un servicio contable, un equipo dedicado a tu tranquilidad. Te acompañamos en tu crecimiento con asesoría especializada y planes transparentes.
+          Más que un servicio contable, somos el equipo dedicado a tu tranquilidad financiera. Te acompañamos con asesoría especializada y planes transparentes.
         </p>
         <div className="flex flex-col gap-3 pt-4">
           <Link

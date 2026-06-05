@@ -6,6 +6,11 @@ import { exportSalaryToPDF, exportSalaryToExcel } from "@/utils/exportTools";
 import { useMindicador } from "@/hooks/useMindicador";
 import { Calculator, DollarSign, PlusCircle, MinusCircle, Info, Settings, Download, FileSpreadsheet, Loader2 } from "lucide-react";
 
+const currencyFormatter = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 });
+const formatCurrency = (val: number) => {
+  return currencyFormatter.format(val);
+};
+
 export default function SalaryCalculator() {
   const [inputs, setInputs] = useState<SalaryInputs>({
     sueldoBase: 500000,
@@ -17,6 +22,8 @@ export default function SalaryCalculator() {
     colacion: 0,
     movilizacion: 0,
     afpId: "habitat",
+    saludType: "fonasa",
+    isapreUF: 0,
     isContratoIndefinido: true,
     apv: 0,
   });
@@ -26,15 +33,15 @@ export default function SalaryCalculator() {
 
   const indicators = useMindicador();
 
-  const results = useMemo(() => calculateSalary({ 
-    ...inputs, 
-    ufValue: indicators.uf, 
-    utmValue: indicators.utm 
+  const results = useMemo(() => calculateSalary({
+    ...inputs,
+    ufValue: indicators.uf,
+    utmValue: indicators.utm
   }), [inputs, indicators]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
-    
+
     if (type === "checkbox") {
       const checked = (e.target as HTMLInputElement).checked;
       setInputs((prev) => ({ ...prev, [name]: checked }));
@@ -43,9 +50,6 @@ export default function SalaryCalculator() {
     }
   };
 
-  const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 }).format(val);
-  };
 
   const handleExportPDF = async () => {
     setIsExportingPDF(true);
@@ -116,7 +120,7 @@ export default function SalaryCalculator() {
 
       {/* Calculadora Box */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm rounded-md overflow-hidden">
-        
+
         {/* Contrato Top Bar */}
         <div className="p-4 border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
           <div className="flex items-center gap-2 mb-4 text-slate-700 dark:text-slate-200 font-semibold text-sm">
@@ -125,14 +129,14 @@ export default function SalaryCalculator() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <label className="block text-xs text-slate-500 mb-1">Condición</label>
-              <select className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta">
+              <select className="w-full bg-transparent dark:bg-slate-900 border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta">
                 <option>Mensual</option>
               </select>
             </div>
             <div>
               <label className="block text-xs text-slate-500 mb-1">Plazo contrato</label>
-              <select 
-                className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta"
+              <select
+                className="w-full bg-transparent dark:bg-slate-900 border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta"
                 name="isContratoIndefinido"
                 value={inputs.isContratoIndefinido ? "true" : "false"}
                 onChange={(e) => setInputs(prev => ({ ...prev, isContratoIndefinido: e.target.value === "true" }))}
@@ -143,16 +147,14 @@ export default function SalaryCalculator() {
             </div>
             <div>
               <label className="block text-xs text-slate-500 mb-1">Horas semanales</label>
-              <select className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta">
-                <option>44</option>
-              </select>
+              <input type="number" placeholder="44" className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm outline-none dark:text-white focus:border-magenta" />
             </div>
           </div>
         </div>
 
         {/* Columnas Haberes y Descuentos */}
         <div className="flex flex-col md:flex-row">
-          
+
           {/* Columna Izquierda: Haberes */}
           <div className="flex-1 p-4 md:p-6 md:border-r border-slate-200 dark:border-slate-700">
             <div className="flex items-center gap-2 mb-6">
@@ -169,8 +171,8 @@ export default function SalaryCalculator() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Gratificación <Info className="w-3 h-3" /></label>
-                  <select 
-                    className="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white"
+                  <select
+                    className="w-full bg-transparent dark:bg-slate-900 border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white"
                     value={inputs.isGratificacionLegal ? "legal" : "manual"}
                     onChange={(e) => setInputs(prev => ({ ...prev, isGratificacionLegal: e.target.value === "legal" }))}
                   >
@@ -229,7 +231,7 @@ export default function SalaryCalculator() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">AFP <Info className="w-3 h-3" /></label>
-                  <select name="afpId" value={inputs.afpId} onChange={handleChange} className="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white">
+                  <select name="afpId" value={inputs.afpId} onChange={handleChange} className="w-full bg-transparent dark:bg-slate-900 border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white">
                     {AFPS.map((afp) => (
                       <option key={afp.id} value={afp.id}>{afp.name} ({(afp.rate * 100).toFixed(2)}%)</option>
                     ))}
@@ -244,15 +246,33 @@ export default function SalaryCalculator() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Previsión Salud <Info className="w-3 h-3" /></label>
-                  <select className="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white">
-                    <option>Fonasa/Isapre (7%)</option>
+                  <select
+                    name="saludType"
+                    value={inputs.saludType}
+                    onChange={handleChange}
+                    className="w-full bg-transparent dark:bg-slate-900 border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white"
+                  >
+                    <option value="fonasa">Fonasa (7%)</option>
+                    <option value="isapre">Isapre</option>
                   </select>
                 </div>
-                <div>
-                  <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Total salud <Info className="w-3 h-3" /></label>
-                  <div className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm text-slate-600 dark:text-slate-400">{formatCurrency(results.saludMonto)}</div>
-                </div>
+                {inputs.saludType === "isapre" ? (
+                  <div>
+                    <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Plan Isapre (UF) <Info className="w-3 h-3" /></label>
+                    <input type="number" step="0.01" placeholder="Ej: 2.5" name="isapreUF" value={inputs.isapreUF || ''} onChange={handleChange} className="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 py-1 text-sm outline-none focus:border-magenta dark:text-white" />
+                  </div>
+                ) : (
+                  <div>
+                    <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Total salud <Info className="w-3 h-3" /></label>
+                    <div className="w-full bg-transparent border-b border-dotted border-slate-400 py-1 text-sm text-slate-600 dark:text-slate-400">{formatCurrency(results.saludMonto)}</div>
+                  </div>
+                )}
               </div>
+              {inputs.saludType === "isapre" && (
+                <div className="text-right">
+                  <span className="text-xs text-slate-500">Valor plan calculado: <span className="font-semibold text-slate-700 dark:text-slate-300">{formatCurrency(results.saludMonto)}</span></span>
+                </div>
+              )}
 
               <div>
                 <label className="flex items-center gap-1 text-xs text-slate-500 mb-1">Seguro de cesantía (0.6%) <Info className="w-3 h-3" /></label>
@@ -284,7 +304,7 @@ export default function SalaryCalculator() {
               <span className="font-bold dark:text-white">{formatCurrency(results.totalHaberes)}</span>
             </div>
           </div>
-          
+
           <div className="border-b md:border-b-0 border-dotted border-slate-400 pb-2 md:pb-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -294,7 +314,7 @@ export default function SalaryCalculator() {
               <span className="font-bold dark:text-white">{formatCurrency(results.totalDescuentos)}</span>
             </div>
           </div>
-          
+
           <div className="border-b md:border-b-0 border-dotted border-slate-400 pb-2 md:pb-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -308,14 +328,15 @@ export default function SalaryCalculator() {
       </div>
 
       <div className="mt-2 text-right">
-        <a href="#" className="text-xs text-slate-500 dark:text-slate-400 underline hover:text-magenta transition-colors">Mostrar bases imponibles y tributable</a>
+        <button type="button" className="text-xs text-slate-500 dark:text-slate-400 underline hover:text-magenta transition-colors bg-transparent border-none p-0 cursor-pointer">Mostrar bases imponibles y tributable</button>
       </div>
 
       {/* Botones de acción */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         <div className="border border-slate-200 dark:border-slate-700 rounded-md p-6 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow bg-white dark:bg-slate-900">
           <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">Descarga tu <strong>simulación en PDF</strong> y obtén mayor detalle.</p>
-          <button 
+          <button
+            type="button"
             onClick={handleExportPDF}
             disabled={isExportingPDF}
             className="bg-teal-500 hover:bg-teal-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-2 px-6 rounded text-sm flex items-center gap-2 transition-colors"
@@ -329,7 +350,8 @@ export default function SalaryCalculator() {
         </div>
         <div className="border border-slate-200 dark:border-slate-700 rounded-md p-6 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow bg-white dark:bg-slate-900">
           <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">Descarga en la <strong>versión Excel</strong> de esta calculadora.</p>
-          <button 
+          <button
+            type="button"
             onClick={handleExportExcel}
             disabled={isExportingExcel}
             className="bg-[#f39c12] hover:bg-[#e67e22] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-2 px-6 rounded text-sm flex items-center gap-2 transition-colors"

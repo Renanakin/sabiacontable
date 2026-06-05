@@ -1,15 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Mail, Phone, MapPin, CheckCircle2, MessageCircle, AlertCircle, Loader2 } from "lucide-react";
 import { useMindicador } from "@/hooks/useMindicador";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-export default function Contacto() {
+const currencyFormatter = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 2 });
+const formatCurrency = (val: number) => {
+  return currencyFormatter.format(val);
+};
+
+function ContactoForm() {
   const indicators = useMindicador();
-
-  const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 2 }).format(val);
-  };
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -26,12 +29,20 @@ export default function Contacto() {
     e.preventDefault();
     setLoading(true);
     setStatus("idle");
+    setErrorMessage("");
 
     try {
+      if (!executeRecaptcha) {
+        throw new Error("El sistema anti-spam (reCAPTCHA) no está disponible en este momento.");
+      }
+
+      // Obtener el token de reCAPTCHA v3
+      const recaptchaToken = await executeRecaptcha("contacto");
+
       const response = await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
       const result = await response.json();
@@ -41,11 +52,17 @@ export default function Contacto() {
         setFormData({ nombre: "", email: "", servicio: "Contabilidad Integral", telefono: "", mensaje: "" });
       } else {
         setStatus("error");
-        setErrorMessage(result.error || "Hubo un problema al enviar el mensaje.");
+        let finalError = result.error || "Hubo un problema al enviar el mensaje.";
+        if (result.details) {
+          finalError += ` | Detalles: ${JSON.stringify(result.details)}`;
+        }
+        setErrorMessage(finalError);
       }
-    } catch {
+    } catch (err: unknown) {
+      console.error("Error en formulario:", err);
       setStatus("error");
-      setErrorMessage("No se pudo conectar con el servidor. Inténtalo más tarde.");
+      const errorMsg = err instanceof Error ? err.message : "No se pudo conectar con el servidor. Inténtalo más tarde.";
+      setErrorMessage(errorMsg);
     } finally {
       setLoading(false);
     }
@@ -106,6 +123,7 @@ export default function Contacto() {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-popups"
               />
             </div>
 
@@ -193,11 +211,10 @@ export default function Contacto() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="telefono" className="block text-xs font-bold uppercase tracking-wider text-slate-300">Teléfono Celular</label>
+                  <label htmlFor="telefono" className="block text-xs font-bold uppercase tracking-wider text-slate-300">Teléfono Celular (Opcional)</label>
                   <input
                     id="telefono"
                     type="tel"
-                    required
                     value={formData.telefono}
                     onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
                     placeholder="Ej. +56 9 8222 3173"
@@ -226,7 +243,7 @@ export default function Contacto() {
                   {loading ? (
                     <>
                       <Loader2 size={18} className="animate-spin" />
-                      Procesando...
+                      Verificando seguridad...
                     </>
                   ) : (
                     "Enviar Solicitud de Asesoría"
@@ -266,6 +283,16 @@ export default function Contacto() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Contacto() {
+  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+  
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey} language="es">
+      <ContactoForm />
+    </GoogleReCaptchaProvider>
   );
 }
 

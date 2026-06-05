@@ -1,0 +1,394 @@
+﻿[1mReact Doctor[22m [2mv0.4.0[22m
+
+[90m  [39m
+
+  [33mÔÜá[39m [33mBugs: Array index used as a key[39m [90m├ù18[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-array-index-as-key[39m
+[2m    ÔåÆ Use a stable id from the item, like `key={item.id}` or[22m
+[2m    `key={item.slug}`. Index keys break when the list reorders[22m
+[2m    or filters.[22m
+
+[90m    src/app/utilitarios/page.tsx:46[39m
+
+[90m    src/components/mobile/home/TestimonialsMobile.tsx:14[39m
+
+[90m    src/components/mobile/home/StatsMobile.tsx:10[39m
+
+[90m    src/components/desktop/home/FeaturesDesktop.tsx:42[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:15[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:21[39m
+
+[90m    src/components/desktop/home/TestimonialsDesktop.tsx:21[39m
+
+[90m    src/components/mobile/home/ServicesMobile.tsx:21[39m
+
+[90m    src/components/desktop/home/ServicesDesktop.tsx:28[39m
+
+[90m    src/components/desktop/home/FaqDesktop.tsx:28[39m
+
+[90m    src/components/desktop/home/StatsDesktop.tsx:76[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:38[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:44[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:104[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:118[39m
+
+[90m    src/components/mobile/home/FeaturesMobile.tsx:15[39m
+
+[90m    src/components/mobile/home/FaqMobile.tsx:23[39m
+
+[90m    src/app/servicios/page.tsx:47[39m
+
+  [33mÔÜá[39m [33mBugs: Time or random value in JSX[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/rendering-hydration-mismatch-time[39m
+[2m    ÔåÆ Move time or random values into useEffect+useState so[22m
+[2m    they only run in the browser, or add[22m
+[2m    suppressHydrationWarning to the parent if it's intentional[22m
+
+[90m    src/components/Footer.tsx:129[39m
+
+  [33mÔÜá[39m [33mSecurity: iframe missing sandbox attribute[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/iframe-missing-sandbox[39m
+[2m    ÔåÆ Add `sandbox=""` (or a curated value) to your iframe.[22m
+
+[90m    src/app/contacto/page.tsx:100[39m
+
+  [33mÔÜá[39m [33mAccessibility: Label missing associated control[39m [90m├ù21[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/label-has-associated-control[39m
+[2m    ÔåÆ Tie every label to a control with `htmlFor`, or by[22m
+[2m    nesting the input.[22m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:64[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:129[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:135[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:147[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:165[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:171[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:182[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:193[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:197[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:203[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:209[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:213[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:231[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:239[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:246[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:259[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:264[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:276[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:281[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:286[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:66[39m
+
+  [33mÔÜá[39m [33mMaintainability: Component rendered by inline function call[39m [90m├ù2[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-render-in-render[39m
+[2m    ÔåÆ Make it a named component, like `const ListItem = ({ item[22m
+[2m    }) => <div>{item.name}</div>`.[22m
+
+[90m    src/app/nuestro-equipo/page.tsx:157[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:96[39m
+
+  [33mÔÜá[39m [33mBugs: Page missing metadata[39m [90m├ù10[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/nextjs-missing-metadata[39m
+[2m    ÔåÆ Add `export const metadata = { title: '...', description:[22m
+[2m    '...' }` or `export async function generateMetadata()`[22m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:1[39m
+
+[90m    src/app/contacto/page.tsx:1[39m
+
+[90m    src/app/utilitarios/page.tsx:1[39m
+
+[90m    src/app/privacidad/page.tsx:1[39m
+
+[90m    src/app/terminos/page.tsx:1[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:1[39m
+
+[90m    src/app/page.tsx:1[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:1[39m
+
+[90m    src/app/quienes-somos/page.tsx:1[39m
+
+[90m    src/app/servicios/page.tsx:1[39m
+
+  [33mÔÜá[39m [33mAccessibility: Control missing accessible label[39m [90m├ù14[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/control-has-associated-label[39m
+[2m    ÔåÆ Give every interactive control a label screen readers can[22m
+[2m    read.[22m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:148[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:166[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:186[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:194[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:198[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:204[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:210[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:214[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:260[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:287[39m
+
+[90m    src/components/mobile/home/HeroMobile.tsx:52[39m
+
+[90m    src/components/mobile/home/HeroMobile.tsx:62[39m
+
+[90m    src/components/desktop/home/HeroDesktop.tsx:55[39m
+
+[90m    src/components/desktop/home/HeroDesktop.tsx:65[39m
+
+  [33mÔÜá[39m [33mBugs: Data fetching inside an effect[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-fetch-in-effect[39m
+[2m    ÔåÆ Use `useQuery()` from @tanstack/react-query, `useSWR()`,[22m
+[2m    or fetch in a Server Component instead[22m
+
+[90m    src/hooks/useMindicador.ts:21[39m
+
+  [33mÔÜá[39m [33mBugs: Image fill missing sizes[39m [90m├ù3[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/nextjs-image-missing-sizes[39m
+[2m    ÔåÆ Add sizes for responsive behavior: `sizes="(max-width:[22m
+[2m    768px) 100vw, 50vw"` matching your layout breakpoints[22m
+
+[90m    src/app/nuestro-equipo/page.tsx:82[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:133[39m
+
+[90m    src/app/servicios/[slug]/page.tsx:85[39m
+
+  [33mÔÜá[39m [33mAccessibility: Anchor used as a button[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/anchor-is-valid[39m
+[2m    ÔåÆ Give links a real destination. Use `<button>` for in-page[22m
+[2m    actions.[22m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:329[39m
+
+  [33mÔÜá[39m [33mBugs: Multiple setState calls in one effect[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-cascading-set-state[39m
+[2m    ÔåÆ Combine into useReducer: `const [state, dispatch] =[22m
+[2m    useReducer(reducer, initialState)`[22m
+
+[90m    src/components/desktop/home/StatsDesktop.tsx:38[39m
+
+  [33mÔÜá[39m [33mAccessibility: Interaction on static element[39m [90m├ù2[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-static-element-interactions[39m
+[2m    ÔåÆ Give clickable static elements a `role`, or use a button[22m
+[2m    or link.[22m
+
+[90m    src/app/nuestro-equipo/page.tsx:75[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:113[39m
+
+  [33mÔÜá[39m [33mMaintainability: deslop/unused-file[39m
+[2m    ÔåÆ Delete the file if it is truly unreachable, or import it[22m
+[2m    from an entry point.[22m
+
+[90m    src/hooks/useDeviceProfile.ts[39m
+
+  [31mÔ£û[39m [31mBugs: State synced to a prop inside an effect[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-adjust-state-on-prop-change[39m
+[2m    ÔåÆ Adjust the state inline during render with a `prev`-prop[22m
+[2m    comparison (`if (prop !== prevProp) { setPrevProp(prop);[22m
+[2m    setX(...); }`), or refactor to remove the duplicated state.[22m
+[2m    Routing the adjustment through a useEffect forces an extra[22m
+[2m    render with a stale UI between the two commits. See[22m
+[2m    https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes[22m
+
+[90m    src/components/desktop/home/StatsDesktop.tsx:34[39m
+    [2mÔöî[22m[2mÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ[22m[2mÔöÉ[22m
+    [2mÔöé[22m [0m [90m 33 |[39m                                                       [2mÔöé[22m
+    [2mÔöé[22m [31m[1m>[22m[39m[90m 34 |[39m     observer[33m.[39mobserve(el)[33m;[39m                             [2mÔöé[22m
+    [2mÔöé[22m  [90m    |[39m     [31m[1m^[22m[39m                                                 [2mÔöé[22m
+    [2mÔöé[22m  [90m 35 |[39m     [36mreturn[39m () [33m=>[39m observer[33m.[39mdisconnect()[33m;[39m[0m               [2mÔöé[22m
+    [2mÔöö[22m[2mÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ[22m[2mÔöÿ[22m
+
+  [33mÔÜá[39m [33mBugs: Button missing explicit type[39m [90m├ù14[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/button-has-type[39m
+[2m    ÔåÆ Always set a `type` on a `<button>`: `type="button"`,[22m
+[2m    `"submit"`, or `"reset"`.[22m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:68[39m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:78[39m
+
+[90m    src/components/mobile/HeaderMobile.tsx:37[39m
+
+[90m    src/app/global-error.tsx:29[39m
+
+[90m    src/app/error.tsx:31[39m
+
+[90m    src/components/desktop/HeaderDesktop.tsx:66[39m
+
+[90m    src/components/desktop/HeaderDesktop.tsx:98[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:122[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:336[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:350[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:70[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:80[39m
+
+[90m    src/components/desktop/home/FaqDesktop.tsx:29[39m
+
+[90m    src/components/mobile/home/FaqMobile.tsx:24[39m
+
+  [33mÔÜá[39m [33mPerformance: State only used in handlers[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/rerender-state-only-in-handlers[39m
+[2m    ÔåÆ Use useRef instead of useState when the value is only set[22m
+[2m    and never shown on screen. `ref.current = ...` updates it[22m
+[2m    without redrawing the component.[22m
+
+[90m    src/components/desktop/home/StatsDesktop.tsx:8[39m
+
+  [33mÔÜá[39m [33mAccessibility: Click handler missing keyboard handler[39m [90m├ù2[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/click-events-have-key-events[39m
+[2m    ÔåÆ Pair `onClick` with a key handler so keyboard users can[22m
+[2m    trigger it.[22m
+
+[90m    src/app/nuestro-equipo/page.tsx:75[39m
+
+[90m    src/app/nuestro-equipo/page.tsx:113[39m
+
+  [33mÔÜá[39m [33mBugs: State initialized from a mount effect[39m [90m├ù3[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-initialize-state[39m
+[2m    ÔåÆ Pass the initial value directly to useState() instead of[22m
+[2m    setting it from a mount-only useEffect. For SSR hydration,[22m
+[2m    prefer useSyncExternalStore().[22m
+
+[90m    src/hooks/useMindicador.ts:39[39m
+
+[90m    src/hooks/useDeviceProfile.ts:11[39m
+
+[90m    src/hooks/useDeviceProfile.ts:18[39m
+
+  [33mÔÜá[39m [33mMaintainability: Static value rebuilt every render[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/prefer-module-scope-static-value[39m
+[2m    ÔåÆ Move the value above the component, at the top of the[22m
+[2m    file. It doesn't use local state, so rebuilding it each[22m
+[2m    update is wasted and makes it look new every time.[22m
+
+[90m    src/app/utilitarios/page.tsx:5[39m
+
+  [33mÔÜá[39m [33mPerformance: Intl formatter rebuilt each call[39m [90m├ù6[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/js-hoist-intl[39m
+[2m    ÔåÆ Move `new Intl.NumberFormat(...)` to the top of the file[22m
+[2m    or wrap it in `useMemo`. Building one is slow, so don't[22m
+[2m    redo it on every call[22m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:29[39m
+
+[90m    src/app/contacto/page.tsx:11[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:49[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:31[39m
+
+[90m    src/components/FinancialBar.tsx:9[39m
+
+[90m    src/utils/exportTools.ts:8[39m
+
+  [33mÔÜá[39m [33mMaintainability: Pure function rebuilt every render[39m [90m├ù5[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/prefer-module-scope-pure-function[39m
+[2m    ÔåÆ Move the function above the component, at the top of the[22m
+[2m    file. It doesn't use local state, so rebuilding it each[22m
+[2m    update is wasted work.[22m
+
+[90m    src/app/utilitarios/calculo-iva/page.tsx:28[39m
+
+[90m    src/app/contacto/page.tsx:10[39m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:48[39m
+
+[90m    src/app/utilitarios/boleta-honorarios/page.tsx:30[39m
+
+[90m    src/components/FinancialBar.tsx:8[39m
+
+  [33mÔÜá[39m [33mMaintainability: Component is too large[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-giant-component[39m
+[2m    ÔåÆ Pull each section into its own component, like[22m
+[2m    `<UserHeader />` and `<UserActions />`.[22m
+
+[90m    src/components/calculators/SalaryCalculator.tsx:9[39m
+
+  [33mÔÜá[39m [33mPerformance: Transition duration too long[39m [90m├ù4[39m
+    [36mLearn more: https://react.doctor/docs/rules/react-doctor/no-long-transition-duration[39m
+[2m    ÔåÆ Keep UI transitions under 1s. Use about 100 to 150ms for[22m
+[2m    instant feedback, 200 to 300ms for state changes, and 300[22m
+[2m    to 500ms for layout. Save longer ones for big page-load[22m
+[2m    animations.[22m
+
+[90m    src/components/mobile/home/HeroMobile.tsx:55[39m
+
+[90m    src/components/mobile/home/HeroMobile.tsx:65[39m
+
+[90m    src/components/desktop/home/HeroDesktop.tsx:58[39m
+
+[90m    src/components/desktop/home/HeroDesktop.tsx:68[39m
+
+
+[2m  ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ[22m
+
+  [1mAll 114 issues[22m
+
+  [1mSecurity[22m [2m>[22m [33m[2m1 warning[22m[39m
+  [1mBugs[22m [2m>[22m [31m1 error[39m[2m, [22m[33m[2m51 warnings[22m[39m
+  [1mPerformance[22m [2m>[22m [33m[2m11 warnings[22m[39m
+  [1mAccessibility[22m [2m>[22m [33m[2m40 warnings[22m[39m
+  [1mMaintainability[22m [2m>[22m [33m[2m10 warnings[22m[39m
+
+  [32mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [32m84[39m [2m/ 100[22m [32mGreat[39m
+  [32mÔöé Ôùá Ôùá Ôöé[39m  [32mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2m[32mÔûô[39m[22m[2mÔûæÔûæÔûæÔûæÔûæÔûæÔûæ[22m
+  [32mÔöé  Ôû¢  Ôöé[39m  React Doctor [2m(https://react.doctor)[22m
+  [32mÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ[39m
+
+[90m  You could improve [39m[32m+1%[39m[90m by fixing the top 3 issues[39m
+[90m  Full diagnostics written to C:\Users\HackBook\AppData\Local\Temp\react-doctor-c0dfa432-b52d-4a9d-a572-430e8d989951[39m
+
+[2m  ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ[22m
+
+  [1mShare:[22m [36mhttps://react.doctor/share?p=web_sabiacontalble&s=84&e=1&w=113&f=33[39m
+[2m  Tell others how you did on socials[22m
+
+  [1mDocs:[22m [36mhttps://react.doctor/docs[39m
+[2m  Learn more about fixing issues, setting up CI/CD, and configuring rules with a config file[22m
+
+  [1mGitHub:[22m [36mhttps://github.com/millionco/react-doctor[39m
+[2m  Report issues and star the repository![22m
+

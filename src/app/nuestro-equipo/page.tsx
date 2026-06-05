@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -28,6 +28,23 @@ function renderBio(bio: string) {
 export default function NuestroEquipo() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
+  // Escuchar la tecla ESC para cerrar el modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedMember(null);
+      }
+    };
+
+    if (selectedMember) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedMember]);
+
   // Prevenir scroll en el body cuando el modal está abierto
   if (typeof window !== "undefined") {
     if (selectedMember) {
@@ -47,7 +64,8 @@ export default function NuestroEquipo() {
             Nuestro Equipo
           </h1>
           <p className="text-slate-400 text-lg">
-            Conoce a los especialistas dedicados a asegurar y potenciar el cumplimiento tributario, laboral y financiero de tu negocio.
+            En Sabia Contable trabajamos con compromiso, rigurosidad y cercanía, acompañando a nuestros clientes en sus procesos contables, tributarios y laborales.
+            Nuestro enfoque está en entregar información clara y oportuna para la toma de decisiones, asegurando el cumplimiento normativo y construyendo relaciones de largo plazo basadas en la confianza, la transparencia y un servicio de alto estándar.
           </p>
         </div>
 
@@ -92,11 +110,11 @@ export default function NuestroEquipo() {
 
         {/* Modal de Detalle */}
         {selectedMember && (
-          <div 
+          <div
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200"
             onClick={() => setSelectedMember(null)}
           >
-            <div 
+            <div
               className="relative w-full max-w-2xl bg-[#0b2545] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] animate-in zoom-in-95 duration-200"
               onClick={(e) => e.stopPropagation()}
             >

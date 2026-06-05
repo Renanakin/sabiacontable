@@ -23,7 +23,7 @@ export const servicesData: ServiceItem[] = [
   {
     slug: "contabilidad-integral",
     title: "Contabilidad Integral",
-    shortDescription: "Mantén tu contabilidad al día y 100% clara. Te asignamos un analista dedicado que conoce la realidad de tu empresa, brindándote reportes precisos y apoyo humano constante para la toma de decisiones.",
+    shortDescription: "Mantén tus finanzas al día y sin errores. Te asignamos un analista dedicado que conoce tu empresa y te entrega reportes precisos para la toma de decisiones.",
     fullDescription: "Nos encargamos del ciclo completo de tu contabilidad para que puedas enfocarte en hacer crecer tu negocio sin preocuparte del papeleo. Conciliamos tus cuentas y mantenemos tus libros actualizados bajo la normativa vigente.",
     bullets: [
       "Registro diario de compras y ventas.",
@@ -46,7 +46,7 @@ Nos conectamos directamente con tus plataformas de facturación para automatizar
   {
     slug: "gestion-de-remuneraciones",
     title: "Gestión de Remuneraciones",
-    shortDescription: "Cuidamos del motor de tu empresa: tu equipo. Gestionamos de forma integral nóminas, contratos y finiquitos, adaptándonos al ritmo de tu crecimiento con procesos eficientes y respaldo legal.",
+    shortDescription: "Cuidamos del motor de tu empresa. Gestionamos nóminas, contratos, finiquitos y cotizaciones de forma ágil, blindando tu empresa ante la Dirección del Trabajo.",
     fullDescription: "Administramos tu personal de manera eficiente y transparente, asegurando el cumplimiento estricto de la legislación laboral chilena y evitando multas de la Dirección del Trabajo.",
     bullets: [
       "Confección de liquidaciones de sueldo.",
@@ -69,7 +69,7 @@ No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacció
   {
     slug: "gestion-tributaria",
     title: "Gestión Tributaria",
-    shortDescription: "Planificamos tu futuro tributario con visión estratégica. Diseñamos un marco de cumplimiento sólido que optimiza tus recursos y protege tu patrimonio, siempre dentro del marco legal vigente.",
+    shortDescription: "Planificamos tu carga fiscal con visión estratégica. Optimizamos tus recursos y protegemos tu patrimonio, manteniéndote siempre en regla ante el SII.",
     fullDescription: "Optimizamos tu carga tributaria de manera legal y ética. Nos encargamos de presentar tus impuestos en las fechas correspondientes para evitar multas o reparos por parte del SII.",
     bullets: [
       "Declaración mensual de impuestos (Formulario 29).",
@@ -92,7 +92,7 @@ La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extre
   {
     slug: "creacion-de-empresa",
     title: "Creación de Empresa",
-    shortDescription: "Constitución en 'Tu Empresa en un Día', inicio de actividades, acreditación de IVA y obtención de patente.",
+    shortDescription: "Te acompañamos desde la idea hasta tu primera factura. Formalizamos tu negocio rápidamente, evitando errores burocráticos y escogiendo el régimen tributario óptimo.",
     fullDescription: "Te acompañamos desde la idea inicial hasta el primer día de facturación. Hacemos que la constitución y formalización de tu empresa sea rápida, guiada y sin errores burocráticos.",
     bullets: [
       "Constitución en plataforma Registro de Empresas y Sociedades.",
@@ -115,7 +115,7 @@ Si bien la plataforma del Estado facilita el registro, el proceso real incluye i
   {
     slug: "auditoria-financiera",
     title: "Auditoría Financiera",
-    shortDescription: "Evaluación objetiva de tus estados financieros para asegurar transparencia y detectar áreas de riesgo.",
+    shortDescription: "Evaluación objetiva y profunda de tus estados financieros. Certificamos la salud de tu empresa para bancos, socios e inversionistas.",
     fullDescription: "Revisamos tus registros para certificar que reflejen fielmente la realidad financiera de tu empresa. Ideal para presentar ante bancos, inversionistas o para el control interno de socios.",
     bullets: [
       "Auditoría externa de estados financieros.",
@@ -145,26 +145,27 @@ export const homeStats = [
 
 export const homeFeatures = [
   {
-    title: "Planes Flexibles y Transparentes",
-    desc: "Creemos en las relaciones de largo plazo. Nuestros servicios integrales están diseñados para acompañar tu volumen operativo mes a mes, brindándote certeza y claridad desde el primer día, sin costos imprevistos.",
+    title: "Planes Claros y sin Sorpresas",
+    desc: "Construimos relaciones a largo plazo. Nuestros servicios se adaptan al volumen operativo de tu empresa mes a mes, entregando certeza y transparencia desde el primer día.",
     iconName: "TrendingUp",
   },
   {
     title: "Tu Analista Personalizado",
-    desc: "Tu tranquilidad es nuestra prioridad. Contarás con un profesional cercano y siempre dispuesto a escucharte, asegurando que tu negocio reciba la atención detallada que merece.",
+    desc: "Tu tranquilidad es nuestra prioridad. Contarás con un profesional contable siempre disponible para escucharte y resolver tus dudas de forma rápida y cercana.",
     iconName: "Users",
   },
   {
     title: "Revisión Preventiva Continua",
-    desc: "No esperamos a fin de mes para actuar. Monitoreamos constantemente tu situación ante el SII y otras entidades para garantizar que tu cumplimiento sea impecable.",
+    desc: "No esperamos a fin de mes. Monitoreamos constantemente tu situación ante el SII y la Dirección del Trabajo para garantizar un cumplimiento impecable y libre de multas.",
     iconName: "ShieldCheck",
   },
   {
-    title: "Gestión Inteligente",
-    desc: "Reportería financiera clara para la toma de decisiones empresariales estratégicas.",
+    title: "Gestión Financiera Inteligente",
+    desc: "Te entregamos reportería financiera clara y oportuna para que tomes decisiones estratégicas basadas en datos reales.",
     iconName: "Landmark",
   },
 ];
+/*
 export const teamData: TeamMember[] = [
   {
     id: "jorge",
@@ -200,6 +201,59 @@ export const teamData: TeamMember[] = [
     image: "/images/equipo/katherine.webp"
   }
 ];
+*/
+
+export const teamData: TeamMember[] = [
+  {
+    id: "jorge",
+    name: "Jorge Ernesto Astorga Méndez",
+    role: "Socio Director",
+    shortDesc: "Contador Auditor y Magíster en Tributación con más de 18 años de experiencia en asesoría empresarial.",
+    bio: "### Mi Rol en Sabia Contable\nLidero la estrategia y supervisión integral de los servicios contables, tributarios, laborales y financieros, apoyando a nuestros clientes en la toma de decisiones y en el cumplimiento eficiente de sus obligaciones.\n\n### Perfil Profesional\nContador Auditor y Magíster en Tributación con más de 18 años de experiencia en asesoría empresarial. Especializado en contabilidad, tributación y control de gestión, enfoco mi trabajo en entregar soluciones estratégicas, combinando conocimiento técnico con una visión de negocio orientada a resultados.",
+    linkedin: "https://www.linkedin.com/in/jorge-ernesto-astorga-mendez-1a53b956/",
+    image: "/images/equipo/jorge.webp"
+  },
+  {
+    id: "lizbet",
+    name: "Lisbet Lumbrera Marambio",
+    role: "Consultora Tributaria",
+    shortDesc: "Contadora Auditora con formación en tributación, orientada al análisis y cumplimiento normativo.",
+    bio: "### Mi Rol en Sabia Contable\nApoyo la gestión tributaria y contable de nuestros clientes, participando en la preparación y revisión de impuestos, declaraciones juradas, procesos de Operación Renta y gestión de remuneraciones, velando por el correcto cumplimiento de las obligaciones fiscales y laborales.\n\n### Perfil Profesional\nContadora Auditora con formación en tributación, orientada al análisis y cumplimiento normativo. Destaco por mi rigurosidad y capacidad de trabajo con información compleja, contribuyendo a entregar seguridad y confiabilidad en la gestión tributaria.",
+    image: "/images/equipo/lisbet.webp"
+  },
+  {
+    id: "daphnee",
+    name: "Daphnee López Muñoz",
+    role: "Consultora Contable",
+    shortDesc: "Contadora Auditora comprometida con el aprendizaje continuo y la calidad del trabajo.",
+    bio: "### Mi Rol en Sabia Contable\nParticipo en la gestión contable, tributaria y de remuneraciones, apoyando en contabilizaciones, análisis de cuentas, preparación de impuestos y procesos laborales, contribuyendo a mantener información financiera ordenada y confiable.\n\n### Perfil Profesional\nContadora Auditora comprometida con el aprendizaje continuo y la calidad del trabajo. Me caracterizo por mi responsabilidad y capacidad analítica, aportando al correcto funcionamiento de los procesos contables.",
+    image: "/images/equipo/daphnee.webp"
+  },
+  {
+    id: "matias",
+    name: "Matías Salinas Cavieres",
+    role: "Consultor Contable",
+    shortDesc: "Contador Auditor metódico y orientado al detalle, con enfoque en la correcta ejecución de procesos.",
+    bio: "### Mi Rol en Sabia Contable\nApoyo la gestión contable, tributaria y de remuneraciones, participando en registros contables, análisis de cuentas y cumplimiento de procesos mensuales y anuales.\n\n### Perfil Profesional\nContador Auditor metódico y orientado al detalle, con enfoque en la correcta ejecución de procesos y cumplimiento de plazos, contribuyendo a la continuidad y calidad del servicio.",
+    image: "/images/equipo/matias.webp"
+  },
+  {
+    id: "ketherine",
+    name: "Katherine Domínguez Pizarro",
+    role: "Consultora Contable",
+    shortDesc: "Profesional organizada y orientada al servicio, con foco en el cumplimiento y eficiencia de los procesos.",
+    bio: "### Mi Rol en Sabia Contable\nColaboro en los procesos contables, tributarios y laborales, apoyando en análisis de cuentas, remuneraciones y atención de requerimientos, asegurando un servicio ordenado y oportuno.\n\n### Perfil Profesional\nProfesional organizada y orientada al servicio, con foco en el cumplimiento y eficiencia de los procesos, contribuyendo a una experiencia de atención confiable para nuestros clientes.",
+    image: "/images/equipo/katherine.webp"
+  },
+  {
+    id: "wendy",
+    name: "Wendy Parra Freitez",
+    role: "Secretaria Administrativa Contable",
+    shortDesc: "Técnico en Organización Empresarial con experiencia en administración y contabilidad.",
+    bio: "### Mi Rol en Sabia Contable\nCoordino la gestión administrativa de la empresa, incluyendo facturación, cobranza, control documental y atención a clientes, apoyando el funcionamiento operativo del equipo.\n\n### Perfil Profesional\nTécnico en Organización Empresarial con experiencia en administración y contabilidad. Me caracterizo por mi organización, gestión eficiente y orientación al cliente, contribuyendo al orden y cumplimiento de los procesos internos.",
+    image: "/images/equipo/wendy.webp"
+  }
+];
 
 export const testimonialsData = [
   {
@@ -221,6 +275,16 @@ export const testimonialsData = [
     quote: "Nos ayudaron a ordenar la contabilidad de 3 años atrás que un contador anterior dejó incompleta. Excelente servicio de auditoría y regularización.",
     author: "Camila Fuentes",
     role: "Directora en SaludPro"
+  },
+  {
+    quote: "Delegar nuestra contabilidad en Sabia ha sido clave. Su equipo mantiene todo impecable, nos asesora de forma proactiva y nos da la total seguridad de que nuestra empresa está siempre al día y en las mejores manos.",
+    author: "Rafael Cordero",
+    role: "Gerente General Cordero & Herrera Ltda."
+  },
+  {
+    quote: "Sabia Contable me ordena todo lo tributario a la perfección. Si alguna vez olvido algún tema o documento, ellos se contactan proactivamente y me evitan cualquier problema con el SII. Me siento verdaderamente acompañado y tranquilo al evitar estas multas.",
+    author: "Héctor Delgado A.",
+    role: "Fundador Hackteck"
   }
 ];
 
@@ -242,3 +306,4 @@ export const faqsData = [
     answer: "Por supuesto. Cada cliente tiene un analista contable de cabecera encargado de su cuenta, lo que garantiza una comunicación fluida y respuestas rápidas a cualquier requerimiento."
   }
 ];
+

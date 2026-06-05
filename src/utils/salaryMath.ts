@@ -26,6 +26,8 @@ export interface SalaryInputs {
   colacion: number;
   movilizacion: number;
   afpId: string;
+  saludType: "fonasa" | "isapre";
+  isapreUF: number;
   isContratoIndefinido: boolean;
   apv: number;
   ufValue?: number; // Para inyección en tiempo real desde mindicador
@@ -57,6 +59,8 @@ export function calculateSalary(inputs: SalaryInputs): SalaryResults {
     colacion,
     movilizacion,
     afpId,
+    saludType = "fonasa",
+    isapreUF = 0,
     isContratoIndefinido,
     apv,
     ufValue = CONSTANTS.UF,
@@ -84,9 +88,14 @@ export function calculateSalary(inputs: SalaryInputs): SalaryResults {
   // 4. Descuentos Legales
   const afp = AFPS.find((a) => a.id === afpId) || AFPS[0];
   const afpMonto = imponibleAfpSalud * afp.rate;
-  
-  const saludMonto = imponibleAfpSalud * 0.07; // 7% base fonasa/isapre
-  
+
+  let saludMonto = 0;
+  if (saludType === "isapre") {
+    saludMonto = isapreUF * ufValue;
+  } else {
+    saludMonto = imponibleAfpSalud * 0.07; // 7% base fonasa
+  }
+
   let cesantiaMonto = 0;
   if (isContratoIndefinido) {
     cesantiaMonto = imponibleCesantia * 0.006; // 0.6% a cargo del trabajador
@@ -95,7 +104,7 @@ export function calculateSalary(inputs: SalaryInputs): SalaryResults {
   // 5. Impuesto Único (Cálculo simplificado tramos en base a UTM dinámica)
   const baseTributable = totalImponible - (afpMonto + saludMonto + cesantiaMonto + apv);
   let impuestoUnico = 0;
-  
+
   if (baseTributable > 13.5 * utmValue && baseTributable <= 30 * utmValue) {
     impuestoUnico = (baseTributable * 0.04) - (0.54 * utmValue);
   } else if (baseTributable > 30 * utmValue && baseTributable <= 50 * utmValue) {
@@ -111,7 +120,7 @@ export function calculateSalary(inputs: SalaryInputs): SalaryResults {
   } else if (baseTributable > 310 * utmValue) {
     impuestoUnico = (baseTributable * 0.40) - (38.82 * utmValue);
   }
-  
+
   if (impuestoUnico < 0) impuestoUnico = 0;
 
   // 6. Totales

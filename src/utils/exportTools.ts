@@ -10,7 +10,7 @@ const formatCurrency = (val: number) => {
 
 export const exportSalaryToPDF = (inputs: SalaryInputs, results: any, indicators: any) => {
   const doc = new jsPDF();
-  
+
   // Colores corporativos Sabia Contable
   const colorAzulRey = [65, 105, 225]; // #4169e1
   const colorMagenta = [216, 0, 115]; // #d80073
@@ -20,11 +20,11 @@ export const exportSalaryToPDF = (inputs: SalaryInputs, results: any, indicators
   doc.setFontSize(22);
   doc.setTextColor(colorDark[0], colorDark[1], colorDark[2]);
   doc.text('Liquidación de Sueldo Simulada', 14, 22);
-  
+
   doc.setFontSize(10);
   doc.setTextColor(100, 100, 100);
   doc.text('Generado por Sabia Contable | www.sabiacontable.cl', 14, 30);
-  
+
   // Línea separadora
   doc.setDrawColor(colorMagenta[0], colorMagenta[1], colorMagenta[2]);
   doc.setLineWidth(0.5);
@@ -44,7 +44,8 @@ export const exportSalaryToPDF = (inputs: SalaryInputs, results: any, indicators
       ['Valor UF Utilizado', formatCurrency(indicators.uf)],
       ['Valor UTM Utilizado', formatCurrency(indicators.utm)],
       ['Gratificación Legal', inputs.isGratificacionLegal ? 'Sí (25% Tope)' : 'Manual'],
-      ['AFP Seleccionada', inputs.afpId.toUpperCase()]
+      ['AFP Seleccionada', inputs.afpId.toUpperCase()],
+      ['Previsión Salud', inputs.saludType === 'isapre' ? `Isapre (${inputs.isapreUF} UF)` : 'Fonasa (7%)']
     ],
     theme: 'grid',
     headStyles: { fillColor: colorDark as [number, number, number], textColor: 255 },
@@ -70,7 +71,7 @@ export const exportSalaryToPDF = (inputs: SalaryInputs, results: any, indicators
 
   const descuentosData = [
     ['AFP', formatCurrency(results.afpMonto)],
-    ['Salud (7%)', formatCurrency(results.saludMonto)],
+    [inputs.saludType === 'isapre' ? 'Salud (Isapre)' : 'Salud (7%)', formatCurrency(results.saludMonto)],
     ['Seguro de Cesantía', formatCurrency(results.cesantiaMonto)],
     ['Impuesto Único', formatCurrency(results.impuestoUnico)],
     ['APV', formatCurrency(inputs.apv || 0)]
@@ -108,11 +109,11 @@ export const exportSalaryToPDF = (inputs: SalaryInputs, results: any, indicators
   doc.setDrawColor(colorMagenta[0], colorMagenta[1], colorMagenta[2]);
   doc.setFillColor(colorDark[0], colorDark[1], colorDark[2]);
   doc.rect(14, endY + 15, 182, 20, 'F');
-  
+
   doc.setFontSize(14);
   doc.setTextColor(255, 255, 255);
   doc.text('LÍQUIDO A PAGO:', 20, endY + 28);
-  
+
   doc.setFontSize(16);
   doc.setTextColor(colorMagenta[0], colorMagenta[1], colorMagenta[2]);
   doc.text(formatCurrency(results.sueldoLiquido), 120, endY + 28, { align: 'left' });
@@ -171,7 +172,7 @@ export const exportSalaryToExcel = async (inputs: SalaryInputs, results: any, in
     if (isCurrency && typeof monto === 'number') {
       row.getCell('C').numFmt = currencyFormat;
     }
-    
+
     // Bordes ligeros
     ['B', 'C'].forEach(col => {
       row.getCell(col).border = {
@@ -186,9 +187,10 @@ export const exportSalaryToExcel = async (inputs: SalaryInputs, results: any, in
 
   addRow('Tipo de Contrato', inputs.isContratoIndefinido ? 'Indefinido' : 'Plazo Fijo', false);
   addRow('AFP', inputs.afpId.toUpperCase(), false);
+  addRow('Previsión de Salud', inputs.saludType === 'isapre' ? `Isapre (${inputs.isapreUF} UF)` : 'Fonasa (7%)', false);
   addRow('Valor UF', indicators.uf);
   addRow('Valor UTM', indicators.utm);
-  
+
   currentRow++;
 
   // --- Haberes ---
@@ -205,7 +207,7 @@ export const exportSalaryToExcel = async (inputs: SalaryInputs, results: any, in
   addRow('Comisiones', inputs.comisiones || 0);
   addRow('Colación (No Imp.)', inputs.colacion || 0);
   addRow('Movilización (No Imp.)', inputs.movilizacion || 0);
-  
+
   sheet.getCell(`B${currentRow}`).value = 'TOTAL HABERES';
   sheet.getCell(`B${currentRow}`).font = { bold: true };
   sheet.getCell(`C${currentRow}`).value = results.totalHaberes;
@@ -221,7 +223,7 @@ export const exportSalaryToExcel = async (inputs: SalaryInputs, results: any, in
   currentRow++;
 
   addRow('AFP', results.afpMonto);
-  addRow('Salud (7%)', results.saludMonto);
+  addRow(inputs.saludType === 'isapre' ? 'Salud (Isapre)' : 'Salud (7%)', results.saludMonto);
   addRow('Seguro de Cesantía', results.cesantiaMonto);
   addRow('Impuesto Único', results.impuestoUnico);
   addRow('APV', inputs.apv || 0);

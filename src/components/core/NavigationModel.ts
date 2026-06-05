@@ -21,7 +21,7 @@ export const servicesItems = [
 
 // Submenú de Utilitarios
 export const utilsItems = [
-  { label: "Cálculo de IVA", path: "/utilitarios/calculo-iva", icon: Calculator },
-  { label: "Boleta de Honorarios", path: "/utilitarios/boleta-honorarios", icon: Calculator },
-  { label: "Calculadora de Sueldo Líquido", path: "/utilitarios/calculadora-sueldos", icon: Calculator },
+  { label: "Cálculo de IVA", path: "/utilitarios#calculadora-iva", icon: Calculator },
+  { label: "Boleta de Honorarios", path: "/utilitarios#boleta-honorarios", icon: Calculator },
+  { label: "Calculadora de Sueldo Líquido", path: "/utilitarios#calculadora-sueldos", icon: Calculator },
 ];
