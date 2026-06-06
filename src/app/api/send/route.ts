@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     if (!parsed.success) {
       // Devuelve el primer error de validación
       return NextResponse.json(
-        { error: parsed.error.errors[0].message },
+        { error: parsed.error.issues[0].message },
         { status: 400 }
       );
     }

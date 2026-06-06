@@ -34,10 +34,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  devIndicators: {
-    appIsrStatus: false,
-    buildActivity: false,
-  },
+
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   compress: true,
