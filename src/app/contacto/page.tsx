@@ -16,7 +16,7 @@ function ContactoForm() {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
-    servicio: "Contabilidad Integral",
+    servicio: "",
     telefono: "",
     mensaje: "",
   });
@@ -49,7 +49,7 @@ function ContactoForm() {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ nombre: "", email: "", servicio: "Contabilidad Integral", telefono: "", mensaje: "" });
+        setFormData({ nombre: "", email: "", servicio: "", telefono: "", mensaje: "" });
       } else {
         setStatus("error");
         let finalError = result.error || "Hubo un problema al enviar el mensaje.";
@@ -176,7 +176,6 @@ function ContactoForm() {
                     required
                     value={formData.nombre}
                     onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                    placeholder="Ej. Andrés Astorga"
                     className="w-full bg-[#032030] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#d80073] transition-colors"
                   />
                 </div>
@@ -189,7 +188,6 @@ function ContactoForm() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="ejemplo@correo.cl"
                     className="w-full bg-[#032030] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#d80073] transition-colors"
                   />
                 </div>
@@ -202,6 +200,7 @@ function ContactoForm() {
                     onChange={(e) => setFormData({ ...formData, servicio: e.target.value })}
                     className="w-full bg-[#032030] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d80073] transition-colors"
                   >
+                    <option value="" disabled>Seleccione un servicio</option>
                     <option value="Contabilidad Integral">Contabilidad Integral</option>
                     <option value="Gestión de Remuneraciones">Gestión de Remuneraciones</option>
                     <option value="Gestión Tributaria">Gestión Tributaria</option>
@@ -217,7 +216,6 @@ function ContactoForm() {
                     type="tel"
                     value={formData.telefono}
                     onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                    placeholder="Ej. +56 9 8222 3173"
                     className="w-full bg-[#032030] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#d80073] transition-colors"
                   />
                 </div>
@@ -230,7 +228,6 @@ function ContactoForm() {
                     required
                     value={formData.mensaje}
                     onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
-                    placeholder="Descríbenos brevemente el giro de tu pyme o tus principales dudas fiscales..."
                     className="w-full bg-[#032030] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#d80073] transition-colors resize-none"
                   />
                 </div>

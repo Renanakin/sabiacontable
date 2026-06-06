@@ -106,7 +106,7 @@ export default function Footer() {
           <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-4">Contacto</h3>
           <div className="flex items-start gap-3">
             <MapPin size={18} className="text-[#d80073] shrink-0 mt-0.5" />
-            <span>Santiago, Chile (Atención en todo el territorio nacional)</span>
+            <span>Gran Avenida José Miguel Carrera 5234, Oficina 402, San Miguel, Región Metropolitana.</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={18} className="text-[#d80073] shrink-0" />

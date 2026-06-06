@@ -83,7 +83,7 @@ export default function HeroDesktop() {
             <span className="text-[#E30080]">Te Enfoques en Crecer</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl min-[1920px]:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-            Más que un servicio contable, somos el equipo dedicado a tu tranquilidad financiera. Te acompañamos con asesoría especializada y planes transparentes para que dediques tu energía a lo que mejor sabes hacer: escalar tu negocio.
+            Más que cumplir obligaciones, te ayudamos a construir un negocio más rentable, ordenado y preparado para crecer. Nos encargamos de la gestión contable y tributaria para que tú puedas concentrarte en generar nuevas oportunidades.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
