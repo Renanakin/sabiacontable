@@ -31,7 +31,7 @@ Este documento define las directrices editoriales, propuestas de valor por segme
 ### 2.3 Nuestro Equipo (`/nuestro-equipo`)
 - **Estructura visible e inmediata**:
   - Cada tarjeta de miembro del equipo operativo incluirá su cargo y una descripción corta de sus funciones principales.
-  - Ejemplo para Analista Contable: *"Revisión tributaria, cierres de ciclo y conciliaciones bancarias diarias."*
+  - Ejemplo para Consultor Contable: *"Revisión tributaria, cierres de ciclo y conciliaciones bancarias diarias."*
   - Se deja el modal interactivo únicamente para expandir la biografía detallada, aptitudes y LinkedIn.
 
 ---

@@ -11,7 +11,7 @@ Se ha completado la **Fase 3: Estrategia de Contenido y Datos** del railroad del
 2. **Estructura y Mocks de Datos:**
    - Creado el archivo [data.ts](file:///c:/Users/HackBook/Documents/desarrollos/web_sabiacontalble/src/app/data.ts) con toda la información estandarizada de:
      - **Servicios**: Descripciones, bullets, e hitos individuales.
-     - **Equipo**: Información clara para cada miembro del equipo operativo (Analista vs Asistente con un campo de descripción visible y biografía extendida).
+     - **Equipo**: Información clara para cada miembro del equipo operativo (Consultor vs Asistente con un campo de descripción visible y biografía extendida).
 
 ---
 

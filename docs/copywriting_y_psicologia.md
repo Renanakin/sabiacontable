@@ -24,9 +24,9 @@ La página de equipo no es solo una galería de rostros; es una herramienta para
 - **Decisión de Copy:** *"Con más de 18 años de experiencia en áreas de contabilidad, tributaria, finanzas..."*
 - **Análisis Psicológico:** El sesgo de autoridad es crítico para decisiones financieras a largo plazo. Al detallar explícitamente sus 18 años de trayectoria y su Magíster en Tributaria, el cliente percibe que sus activos y defensas ante el SII están en manos expertas.
 
-### 2.2 Lisbet Lumbrera (Analista Contable) — Eje de Cercanía y Operación
+### 2.2 Lisbet Lumbrera (Consultor Contable) — Eje de Cercanía y Operación
 - **Decisión de Copy:** *"Mi rol es apoyar la gestión contable y fiscal... asegurando calidad y cumplimiento."*
-- **Análisis Psicológico:** Al definir claramente la diferencia entre el Socio Director (estrategia) y la Analista Contable (operación y rigurosidad diaria), el cliente comprende de inmediato con quién interactuará en el día a día, reduciendo la ansiedad de comunicación y delimitando canales claros.
+- **Análisis Psicológico:** Al definir claramente la diferencia entre el Socio Director (estrategia) y el Consultor Contable (operación y rigurosidad diaria), el cliente comprende de inmediato con quién interactuará en el día a día, reduciendo la ansiedad de comunicación y delimitando canales claros.
 
 ---
 

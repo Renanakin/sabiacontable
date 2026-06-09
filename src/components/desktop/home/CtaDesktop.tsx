@@ -9,14 +9,16 @@ export default function CtaDesktop() {
       <div className="site-container max-w-5xl">
         <div className="inline-flex items-center gap-2 p-3 rounded-full bg-white/5 border border-white/10 w-fit text-slate-300 text-sm mx-auto">
           <PhoneCall size={16} className="text-[#E30080]" />
-          <span>¿Tienes dudas? Conversa con un analista directamente</span>
+          <span>¿Tienes dudas? Conversa con un consultor directamente</span>
         </div>
         <h2 className="text-2xl sm:text-3xl lg:text-5xl min-[1920px]:text-6xl font-extrabold text-white tracking-tight leading-tight">
-          Simplifica tu Contabilidad <br />
-          <span className="text-[#E30080]">Hoy Mismo</span>
+          Profesionalismo, Compromiso <br />
+          <span className="text-[#E30080]">y Resultados</span>
         </h2>
-        <p className="text-slate-400 max-w-xl mx-auto mt-4">
-          Agenda una sesión inicial gratuita de 15 minutos para revisar el estado contable de tu empresa y detectar oportunidades de optimización tributaria.
+        <p className="text-slate-400 max-w-2xl mx-auto mt-4 text-sm sm:text-base leading-relaxed">
+          Desde nuestros inicios, en Sabia Contable hemos mantenido un firme compromiso con el profesionalismo, la excelencia y el crecimiento de las Pymes chilenas. Cada asesoría está respaldada por un equipo de especialistas que trabajan con rigurosidad técnica y visión estratégica.
+          <br /><br />
+          Más que un proveedor contable, somos el aliado que tu negocio necesita para escalar de forma segura y sostenible.
         </p>
         <div className="pt-8">
           <Link

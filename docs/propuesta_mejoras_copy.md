@@ -23,7 +23,7 @@ A continuación, la propuesta de textos para implementar en `src/app/data.ts`:
 ## 2. Ajustes en `servicesData` (Descripciones Cortas)
 
 ### Servicio: Asesoría Contable
-* **Propuesta:** "Mantén tu contabilidad al día y 100% clara. Te asignamos un analista dedicado que conoce la realidad de tu empresa, brindándote reportes precisos y apoyo humano constante para la toma de decisiones."
+* **Propuesta:** "Mantén tu contabilidad al día y 100% clara. Te asignamos un consultor dedicado que conoce la realidad de tu empresa, brindándote reportes precisos y apoyo humano constante para la toma de decisiones."
 
 ### Servicio: Asesoría Laboral
 * **Propuesta:** "Cuidamos del motor de tu empresa: tu equipo. Gestionamos de forma integral nóminas, contratos y finiquitos, adaptándonos al ritmo de tu crecimiento con procesos eficientes y respaldo legal."
@@ -40,7 +40,7 @@ Renombramos y ajustamos las descripciones para enfocarlas en el valor añadido y
 1. **De "Transparencia Total" a "Planes Flexibles y Transparentes":**
    * *Descripción propuesta:* "Creemos en las relaciones de largo plazo. Nuestros servicios integrales están diseñados para acompañar tu volumen operativo mes a mes, brindándote certeza y claridad desde el primer día, sin costos imprevistos."
 
-2. **De "Acompañamiento Estratégico" a "Tu Analista Personalizado":**
+2. **De "Acompañamiento Estratégico" a "Tu Consultor Personalizado":**
    * *Descripción propuesta:* "Tu tranquilidad es nuestra prioridad. Contarás con un profesional cercano y siempre dispuesto a escucharte, asegurando que tu negocio reciba la atención detallada que merece."
 
 3. **Nueva Característica (Para SEO y Confianza): "Revisión Preventiva Continua"**

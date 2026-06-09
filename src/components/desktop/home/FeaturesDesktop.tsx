@@ -13,7 +13,7 @@ export default function FeaturesDesktop() {
             ¿Por qué elegir <span className="text-[#E30080]">Sabia Contable</span>?
           </h2>
           <p className="text-slate-300 leading-relaxed">
-            No somos solo un software automático de facturación. Combinamos digitalización avanzada para el control de tus registros con analistas dedicados para darte soluciones y defensa tributaria real ante el SII.
+            No somos solo un software automático de facturación. Combinamos digitalización avanzada para el control de tus registros con consultores dedicados para darte soluciones y defensa tributaria real ante el SII.
           </p>
           <div className="space-y-4 pt-2">
             <div className="flex gap-3">

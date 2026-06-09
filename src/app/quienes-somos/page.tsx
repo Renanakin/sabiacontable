@@ -11,7 +11,7 @@ export default function QuienesSomos() {
             Quiénes Somos
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            Socios estratégicos dedicados a simplificar las obligaciones fiscales y laborales de tu empresa, permitiéndote liderar tu negocio con total tranquilidad.
+            En Sabia Contable, estudio contable fundado en 2015, creemos que los servicios de contabilidad en Chile deben ir más allá del simple cumplimiento de la normativa tributaria y financiera. Nuestro propósito es transformar la contabilidad de tu empresa en una herramienta estratégica, útil y fácil de comprender, que acompañe a pymes y emprendedores en la toma de decisiones clave para un crecimiento comercial sostenible.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export default function QuienesSomos() {
             </div>
             <h2 className="text-2xl font-bold text-white">Nuestra Misión</h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Facilitar el éxito de las empresas chilenas mediante la simplificación de sus deberes tributarios y contables, convirtiendo la complejidad técnica en confianza operativa y crecimiento sostenible.
+              Ser el aliado estratégico definitivo de las pymes chilenas en los ámbitos contable, tributario y laboral. Nos dedicamos a entregar información financiera clara, precisa y oportuna que respalde la toma de decisiones acertadas y sostenibles.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export default function QuienesSomos() {
             </div>
             <h2 className="text-2xl font-bold text-white">Nuestra Visión</h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Consolidarnos como el socio estratégico preferido de las pymes y profesionales en Chile, siendo reconocidos por la transparencia absoluta, la digitalización de procesos y la calidad humana de nuestro equipo.
+              Aspiramos a consolidarnos como una firma de asesoría contable y tributaria líder a nivel nacional, reconocida por su solidez, confiabilidad y excelencia operativa. Nuestro objetivo es ser referentes en el sector financiero, generando valor real para nuestros clientes y contribuyendo activamente al desarrollo económico del país.
             </p>
           </div>
         </div>
@@ -47,23 +47,23 @@ export default function QuienesSomos() {
           <div className="relative border-l border-white/10 ml-4 space-y-8 pl-8">
             <div className="relative">
               <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-[#d80073]/10 border border-[#d80073] flex items-center justify-center text-xs text-[#d80073] font-bold">1</div>
-              <h3 className="font-bold text-white">Fundación y Origen (2015)</h3>
+              <h3 className="font-bold text-white">Consultoría Innovadora desde 2015</h3>
               <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                Sabia Contable nace bajo el liderazgo de Jorge Astorga con el propósito de resolver las brechas tradicionales de comunicación y los retrasos contables recurrentes a los que se enfrentan las pymes ante el SII.
+                A lo largo de más de una década, en Sabia Contable hemos desarrollado una consultoría financiera innovadora basada en nuestra metodología exclusiva: Soluciones a tu alcance. Este enfoque nos permite aplicar los más altos estándares de excelencia y buenas prácticas del mercado contable chileno.
               </p>
             </div>
             <div className="relative">
               <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-[#d80073]/10 border border-[#d80073] flex items-center justify-center text-xs text-[#d80073] font-bold">2</div>
-              <h3 className="font-bold text-white">Especialización e Integración Laboral (2018)</h3>
+              <h3 className="font-bold text-white">Enfoque y Servicios Integrales</h3>
               <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                Ampliamos nuestra cartera de servicios integrando la asesoría legal, gestión de remuneraciones y contratos en PreviRed, estructurando un equipo multidisciplinario altamente calificado.
+                Como expertos en asesoría contable y tributaria, nos especializamos en contabilidad mensual, gestión de remuneraciones, auditorías y apoyo legal. Nos adaptamos a las necesidades específicas de cada empresa con soluciones ágiles y personalizadas para el ecosistema Pyme.
               </p>
             </div>
             <div className="relative">
               <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-[#d80073]/10 border border-[#d80073] flex items-center justify-center text-xs text-[#d80073] font-bold">3</div>
-              <h3 className="font-bold text-white">Consolidación Digital (2023)</h3>
+              <h3 className="font-bold text-white">Relaciones de Confianza a Largo Plazo</h3>
               <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                Digitalizamos el 100% de la gestión de respaldos financieros, implementando canales expeditos de atención al cliente y consolidando un estándar de cero multas.
+                Hemos acompañado con éxito a cientos de empresas y emprendedores en la optimización de sus procesos, gracias a un equipo multidisciplinario altamente capacitado en tributación, gestión de personas y materias legales. Entendemos que detrás de cada balance hay una meta comercial.
               </p>
             </div>
           </div>

@@ -6,6 +6,7 @@ import HeaderMobile from "@/components/mobile/HeaderMobile";
 import Footer from "@/components/Footer";
 import BottomNavMobile from "@/components/mobile/BottomNavMobile";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -98,6 +99,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <ScrollToTop />
         <BottomNavMobile />
       </body>
     </html>

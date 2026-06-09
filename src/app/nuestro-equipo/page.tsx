@@ -18,7 +18,7 @@ function renderBio(bio: string) {
       );
     }
     return (
-      <p key={i} className="text-sm text-slate-300 leading-relaxed mb-6">
+      <p key={i} className="text-sm text-slate-300 leading-relaxed mb-6 text-justify">
         {block}
       </p>
     );
@@ -77,15 +77,18 @@ export default function NuestroEquipo() {
               className="card-spotlight rounded-2xl p-6 flex flex-col justify-between cursor-pointer"
               onClick={() => setSelectedMember(member)}
             >
-              <div className="space-y-4">
-                <div className="relative w-20 h-20 rounded-full bg-[#032030] overflow-hidden border-2 border-[#E30080]/40 flex items-center justify-center">
-                  <Image src={member.image} alt={member.name} fill className="object-cover" />
+              <div className="space-y-4 flex-grow flex flex-col">
+                <div className="flex items-center gap-4">
+                  <div className="relative w-16 h-16 rounded-full bg-[#032030] overflow-hidden border-2 border-[#E30080]/40 shrink-0 flex items-center justify-center">
+                    {/* AQUÍ SE APLICA EL AJUSTE DE IMAGEN. Lee objectPosition desde data.ts */}
+                    <Image src={member.image} alt={member.name} fill className="object-cover" style={{ objectPosition: member.objectPosition || "center" }} />
+                  </div>
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-bold text-white leading-tight">{member.name}</h3>
+                    <span className="text-[11px] font-semibold text-[#E30080] uppercase tracking-wider mt-0.5">{member.role}</span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                  <span className="text-xs font-semibold text-[#E30080] uppercase tracking-wider">{member.role}</span>
-                </div>
-                <p className="text-sm text-slate-300 leading-relaxed pt-2">
+                <p className="text-sm text-slate-300 leading-relaxed text-justify flex-grow mt-2">
                   {member.shortDesc}
                 </p>
               </div>
@@ -130,7 +133,8 @@ export default function NuestroEquipo() {
               <div className="overflow-y-auto p-6 md:p-8">
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   <div className="relative w-24 h-24 rounded-2xl bg-[#032030] border-2 border-[#E30080] overflow-hidden flex items-center justify-center shrink-0">
-                    <Image src={selectedMember.image} alt={selectedMember.name} fill className="object-cover" />
+                    {/* AQUÍ SE APLICA EL AJUSTE DE IMAGEN. Lee objectPosition desde data.ts */}
+                    <Image src={selectedMember.image} alt={selectedMember.name} fill className="object-cover" style={{ objectPosition: selectedMember.objectPosition || "center" }} />
                   </div>
                   <div className="space-y-2 pr-6 flex flex-col items-start">
                     <h2 className="text-2xl font-bold text-white">{selectedMember.name}</h2>

@@ -79,11 +79,11 @@ export default function HeroDesktop() {
             Asesoría Contable Premium
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl min-[1920px]:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            Tranquilidad para que <br />
-            <span className="text-[#E30080]">Te Enfoques en Crecer</span>
+            ¡Lleva la Contabilidad de tu Empresa <br />
+            <span className="text-[#E30080]">al Siguiente Nivel!</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl min-[1920px]:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-            Más que cumplir obligaciones, te ayudamos a construir un negocio más rentable, ordenado y preparado para crecer. Nos encargamos de la gestión contable y tributaria para que tú puedas concentrarte en generar nuevas oportunidades.
+            Tu tranquilidad contable y tributaria comienza aquí. En <strong>Sabia Contable</strong>, estudio contable líder para Empresas y Pymes en Chile, convertimos los desafíos financieros y laborales en soluciones claras y efectivas. Te acompañamos con asesoría experta, cercana y 100% transparente para que tomes decisiones estratégicas con total confianza.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link

@@ -9,7 +9,8 @@
     "url:equipo": "powershell -NoProfile -Command \"Write-Output ('http://' + $env:COMPUTERNAME + ':3001')\"",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "exceljs": "^4.4.0",

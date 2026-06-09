@@ -1,6 +1,12 @@
+"use client";
+
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function WhatsAppFloat() {
+  const pathname = usePathname();
+  
+  if (pathname === '/contacto') return null;
   const whatsappNumber = "56982223173"; // Número oficial de Sabia Contable
   const message = "Hola! Me gustaría hacer una consulta sobre los servicios de Sabia Contable.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

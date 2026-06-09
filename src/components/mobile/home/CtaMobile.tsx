@@ -8,10 +8,10 @@ export default function CtaMobile() {
     <section className="py-16 px-5 text-center pb-28">
       <div className="inline-flex items-center gap-2 p-3 rounded-full bg-white/5 border border-white/10 w-fit text-slate-300 text-xs mb-6 mx-auto">
         <PhoneCall size={14} className="text-[#E30080]" />
-        <span>Conversa con un analista directamente</span>
+        <span>Conversa con un consultor directamente</span>
       </div>
-      <h2 className="text-3xl font-extrabold text-white mb-5">Simplifica tu Contabilidad <span className="text-[#E30080]">Hoy</span></h2>
-      <p className="text-slate-400 text-sm mb-8">Agenda una sesión inicial gratuita de 15 minutos para revisar el estado contable de tu empresa.</p>
+      <h2 className="text-3xl font-extrabold text-white mb-5">Profesionalismo y <span className="text-[#E30080]">Resultados</span></h2>
+      <p className="text-slate-400 text-sm mb-8">Desde nuestros inicios hemos mantenido un firme compromiso con el crecimiento de las Pymes chilenas. Más que un proveedor contable, somos el aliado que tu negocio necesita para escalar de forma segura.</p>
       <Link
         href="/contacto"
         className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#E30080] text-white font-bold w-full shadow-lg shadow-[#E30080]/20"

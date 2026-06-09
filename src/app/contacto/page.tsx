@@ -133,10 +133,10 @@ function ContactoForm() {
                   <MessageCircle className="text-emerald-400" size={20} />
                   ¿Prefieres conversar por WhatsApp?
                 </h4>
-                <p className="text-xs text-slate-300">Resolución de dudas tributarias o cotizaciones rápidas con un analista disponible.</p>
+                <p className="text-xs text-slate-300">Resolución de dudas tributarias o cotizaciones rápidas con un consultor disponible.</p>
               </div>
               <a
-                href="https://wa.me/56982223173"
+                href="https://wa.me/56982223173?text=Hola,%20equipo%20de%20Sabia%20Contable.%20Quisiera%20solicitar%20asesor%C3%ADa%20y%20conocer%20m%C3%A1s%20detalles%20sobre%20los%20servicios%20contables%20y%20tributarios%20para%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20orientarme,%20por%20favor%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-interactive shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg shadow-emerald-500/10"
@@ -154,7 +154,7 @@ function ContactoForm() {
                 </div>
                 <h3 className="text-2xl font-bold text-white">Mensaje enviado con éxito</h3>
                 <p className="text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
-                  Gracias por tu consulta. Tu requerimiento ha sido registrado y un analista te responderá vía email o teléfono dentro de las próximas 2 horas hábiles.
+                  Gracias por tu consulta. Tu requerimiento ha sido registrado y un consultor te responderá vía email o teléfono dentro de las próximas 2 horas hábiles.
                 </p>
               </div>
             ) : (

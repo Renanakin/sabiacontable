@@ -6,6 +6,8 @@ export interface TeamMember {
   bio: string;
   linkedin?: string;
   image: string;
+  // Puedes usar esto para bajar/subir la imagen. Ej: "center 20%" o "center 10px". Por defecto es "center"
+  objectPosition?: string;
 }
 
 export interface ServiceItem {
@@ -23,13 +25,16 @@ export const servicesData: ServiceItem[] = [
   {
     slug: "contabilidad-integral",
     title: "Contabilidad Integral",
-    shortDescription: "Mantén tus finanzas al día y sin errores. Te asignamos un analista dedicado que conoce tu empresa y te entrega reportes precisos para la toma de decisiones.",
+    shortDescription: "Mantén tus finanzas al día y sin errores. Te asignamos un analista dedicado que conoce tu empresa y te entrega reportes contables precisos y actualizados para la toma de decisiones estratégicas, garantizando siempre el cumplimiento ante el SII.",
     fullDescription: "Nos encargamos del ciclo completo de tu contabilidad para que puedas enfocarte en hacer crecer tu negocio sin preocuparte del papeleo. Conciliamos tus cuentas y mantenemos tus libros actualizados bajo la normativa vigente.",
     bullets: [
-      "Registro diario de compras y ventas.",
-      "Conciliación bancaria automatizada.",
-      "Balances mensuales y estados financieros.",
-      "Control de activos fijos y depreciaciones."
+      "Asesoría contable continua.",
+      "Externalización en el área de contabilidad.",
+      "Declaración de impuestos mensuales y anuales.",
+      "Preparación de Estados Financieros.",
+      "Reprocesos de contabilidades.",
+      "Contraloría contable y tributaria.",
+      "Planes contables personalizados."
     ],
     features: [
       "Reportes en tiempo real",
@@ -46,13 +51,17 @@ Nos conectamos directamente con tus plataformas de facturación para automatizar
   {
     slug: "gestion-de-remuneraciones",
     title: "Gestión de Remuneraciones",
-    shortDescription: "Cuidamos del motor de tu empresa. Gestionamos nóminas, contratos, finiquitos y cotizaciones de forma ágil, blindando tu empresa ante la Dirección del Trabajo.",
+    shortDescription: "Cuidamos del motor de tu empresa. Gestionamos nóminas, contratos, finiquitos y pago de cotizaciones (PreviRed) de forma ágil, blindando tu negocio y asegurando un cumplimiento estricto ante la Dirección del Trabajo.",
     fullDescription: "Administramos tu personal de manera eficiente y transparente, asegurando el cumplimiento estricto de la legislación laboral chilena y evitando multas de la Dirección del Trabajo.",
     bullets: [
-      "Confección de liquidaciones de sueldo.",
-      "Cálculo y declaración de cotizaciones previsionales (PreviRed).",
-      "Redacción de contratos de trabajo y anexos.",
-      "Gestión y cálculo de finiquitos y vacaciones."
+      "Confección de remuneraciones (Rol General).",
+      "Rol Privado de Remuneraciones (informe confidencial para gerencia).",
+      "Elaboración de contratos y finiquitos.",
+      "Carga de leyes sociales (AFP, salud, seguro de cesantía).",
+      "Carga de LRE (Libro de Remuneraciones Electrónico) ante la Dirección del Trabajo.",
+      "Certificado F30: Antecedentes Laborales y Previsionales.",
+      "Certificado F30-1: Cumplimiento de Obligaciones Laborales y Previsionales.",
+      "Contraloría de remuneraciones."
     ],
     features: [
       "Libro de Remuneraciones Electrónico (LRE)",
@@ -69,13 +78,14 @@ No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacció
   {
     slug: "gestion-tributaria",
     title: "Gestión Tributaria",
-    shortDescription: "Planificamos tu carga fiscal con visión estratégica. Optimizamos tus recursos y protegemos tu patrimonio, manteniéndote siempre en regla ante el SII.",
+    shortDescription: "Planificamos tu carga fiscal con visión estratégica. Optimizamos tus recursos, protegemos tu patrimonio y nos encargamos de las declaraciones de renta e IVA mensual, manteniéndote siempre en regla y libre de contingencias ante el SII.",
     fullDescription: "Optimizamos tu carga tributaria de manera legal y ética. Nos encargamos de presentar tus impuestos en las fechas correspondientes para evitar multas o reparos por parte del SII.",
     bullets: [
-      "Declaración mensual de impuestos (Formulario 29).",
-      "Operación Renta anual (Formulario 22).",
-      "Declaraciones Juradas de renta.",
-      "Planificación tributaria y optimización legal."
+      "Asesoría y optimización tributaria.",
+      "Confección mensual de cierres tributarios.",
+      "Consultoría y cumplimiento tributario.",
+      "Asesoría en la implementación de la reforma tributaria para empresas y dueños.",
+      "Estudio y análisis tributario."
     ],
     features: [
       "Simulaciones previas al cierre de año",
@@ -92,13 +102,17 @@ La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extre
   {
     slug: "creacion-de-empresa",
     title: "Creación de Empresa",
-    shortDescription: "Te acompañamos desde la idea hasta tu primera factura. Formalizamos tu negocio rápidamente, evitando errores burocráticos y escogiendo el régimen tributario óptimo.",
+    shortDescription: "Te acompañamos desde la idea hasta tu primera venta. Formalizamos y constituimos tu negocio rápidamente, evitando errores burocráticos y asesorándote para escoger el régimen tributario más beneficioso para tu Pyme.",
     fullDescription: "Te acompañamos desde la idea inicial hasta el primer día de facturación. Hacemos que la constitución y formalización de tu empresa sea rápida, guiada y sin errores burocráticos.",
     bullets: [
-      "Constitución en plataforma Registro de Empresas y Sociedades.",
-      "Redacción de estatutos personalizados.",
-      "Inicio de actividades y obtención de RUT ante el SII.",
-      "Acreditación de actividades e IVA ante el SII."
+      "Escritura Pública.",
+      "Inscripción en el Registro de Comercio.",
+      "Inscripción en Conservador de Bienes Raíces.",
+      "Publicación en el Diario Oficial.",
+      "Obtención de Rut.",
+      "Tu empresa en un día (Registro De Empresas Y Sociedades).",
+      "Inicio actividades SII.",
+      "Inscripción Factura electrónica."
     ],
     features: [
       "Habilitación de facturación electrónica",
@@ -115,13 +129,16 @@ Si bien la plataforma del Estado facilita el registro, el proceso real incluye i
   {
     slug: "auditoria-financiera",
     title: "Auditoría Financiera",
-    shortDescription: "Evaluación objetiva y profunda de tus estados financieros. Certificamos la salud de tu empresa para bancos, socios e inversionistas.",
+    shortDescription: "Evaluación objetiva y profunda de tus estados financieros. Auditamos y certificamos la salud corporativa de tu empresa bajo normas IFRS, otorgando total transparencia para bancos, socios, inversionistas e instituciones financieras.",
     fullDescription: "Revisamos tus registros para certificar que reflejen fielmente la realidad financiera de tu empresa. Ideal para presentar ante bancos, inversionistas o para el control interno de socios.",
     bullets: [
-      "Auditoría externa de estados financieros.",
-      "Evaluación del sistema de control interno.",
-      "Detección de riesgos operativos y de fraude.",
-      "Informes de auditoría bajo normas IFRS."
+      "Auditoría Estados Financieros.",
+      "Auditoría Tributaria.",
+      "Auditoría Interna.",
+      "Auditoria de Condominios.",
+      "Revisión información contable.",
+      "Revisión información de remuneraciones.",
+      "Revisión de procesos."
     ],
     features: [
       "Certificación para entidades financieras",
@@ -145,23 +162,23 @@ export const homeStats = [
 
 export const homeFeatures = [
   {
-    title: "Planes Claros y sin Sorpresas",
-    desc: "Construimos relaciones a largo plazo. Nuestros servicios se adaptan al volumen operativo de tu empresa mes a mes, entregando certeza y transparencia desde el primer día.",
-    iconName: "TrendingUp",
+    title: "Flexibilidad",
+    desc: "Entendemos que cada modelo de negocio es único. Por eso, diseñamos soluciones contables y financieras que se ajustan a tu tamaño, ritmo operativo y recursos.",
+    iconName: "Settings",
   },
   {
-    title: "Tu Analista Personalizado",
-    desc: "Tu tranquilidad es nuestra prioridad. Contarás con un profesional contable siempre disponible para escucharte y resolver tus dudas de forma rápida y cercana.",
+    title: "Soporte",
+    desc: "Siempre disponibles para resolver tus dudas operativas, contables y tributarias. Te acompañamos con atención rápida y personalizada, sin tecnicismos innecesarios.",
     iconName: "Users",
   },
   {
-    title: "Revisión Preventiva Continua",
-    desc: "No esperamos a fin de mes. Monitoreamos constantemente tu situación ante el SII y la Dirección del Trabajo para garantizar un cumplimiento impecable y libre de multas.",
+    title: "Compromiso",
+    desc: "Nos integramos como el brazo financiero de tu equipo. Trabajamos con dedicación total para proteger tu patrimonio y alcanzar tus metas comerciales.",
     iconName: "ShieldCheck",
   },
   {
-    title: "Gestión Financiera Inteligente",
-    desc: "Te entregamos reportería financiera clara y oportuna para que tomes decisiones estratégicas basadas en datos reales.",
+    title: "Gestión de Información",
+    desc: "Vamos más allá del cumplimiento ante el SII. Transformamos tu información financiera en reportes clave, dándote visibilidad total para gestionar tu empresa con máxima eficiencia.",
     iconName: "Landmark",
   },
 ];
@@ -219,7 +236,8 @@ export const teamData: TeamMember[] = [
     role: "Consultora Tributaria",
     shortDesc: "Contadora Auditora con formación en tributación, orientada al análisis y cumplimiento normativo.",
     bio: "### Mi Rol en Sabia Contable\nApoyo la gestión tributaria y contable de nuestros clientes, participando en la preparación y revisión de impuestos, declaraciones juradas, procesos de Operación Renta y gestión de remuneraciones, velando por el correcto cumplimiento de las obligaciones fiscales y laborales.\n\n### Perfil Profesional\nContadora Auditora con formación en tributación, orientada al análisis y cumplimiento normativo. Destaco por mi rigurosidad y capacidad de trabajo con información compleja, contribuyendo a entregar seguridad y confiabilidad en la gestión tributaria.",
-    image: "/images/equipo/lisbet.webp"
+    image: "/images/equipo/lisbet.webp",
+    objectPosition: "center 20%" // Ajusta el porcentaje (ej. 10%, 20%, 30%) para moverla unos pixeles arriba o abajo
   },
   {
     id: "daphnee",
@@ -227,7 +245,8 @@ export const teamData: TeamMember[] = [
     role: "Consultora Contable",
     shortDesc: "Contadora Auditora comprometida con el aprendizaje continuo y la calidad del trabajo.",
     bio: "### Mi Rol en Sabia Contable\nParticipo en la gestión contable, tributaria y de remuneraciones, apoyando en contabilizaciones, análisis de cuentas, preparación de impuestos y procesos laborales, contribuyendo a mantener información financiera ordenada y confiable.\n\n### Perfil Profesional\nContadora Auditora comprometida con el aprendizaje continuo y la calidad del trabajo. Me caracterizo por mi responsabilidad y capacidad analítica, aportando al correcto funcionamiento de los procesos contables.",
-    image: "/images/equipo/daphnee.webp"
+    image: "/images/equipo/daphnee.webp",
+    objectPosition: "center 20%" // Ajusta el porcentaje (ej. 10%, 20%, 30%) para moverla unos pixeles arriba o abajo
   },
   {
     id: "matias",
@@ -248,9 +267,9 @@ export const teamData: TeamMember[] = [
   {
     id: "wendy",
     name: "Wendy Parra Freitez",
-    role: "Secretaria Administrativa Contable",
-    shortDesc: "Técnico en Organización Empresarial con experiencia en administración y contabilidad.",
-    bio: "### Mi Rol en Sabia Contable\nCoordino la gestión administrativa de la empresa, incluyendo facturación, cobranza, control documental y atención a clientes, apoyando el funcionamiento operativo del equipo.\n\n### Perfil Profesional\nTécnico en Organización Empresarial con experiencia en administración y contabilidad. Me caracterizo por mi organización, gestión eficiente y orientación al cliente, contribuyendo al orden y cumplimiento de los procesos internos.",
+    role: "Soporte Administrativo",
+    shortDesc: "Técnico en Organización Empresarial con experiencia en labores administrativas y gestión documental.",
+    bio: "### Acerca de su Rol\nBrinda apoyo a la gestión administrativa y operativa de Sabia Contable, colaborando en la organización de documentación, coordinación de procesos internos y seguimiento de tareas que contribuyen al correcto funcionamiento del equipo.\n\n### Perfil Profesional\nTécnico en Organización Empresarial con experiencia en labores administrativas y gestión documental. Se caracteriza por su organización, responsabilidad y orientación al cumplimiento de procesos, aportando apoyo permanente a las operaciones internas de la empresa.",
     image: "/images/equipo/wendy.webp"
   }
 ];

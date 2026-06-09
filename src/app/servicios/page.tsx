@@ -21,7 +21,7 @@ export default function Servicios() {
             Servicios Profesionales
           </h1>
           <p className="text-slate-400 text-lg">
-            Soluciones contables, tributarias y laborales robustas e integradas, diseñadas para brindar cumplimiento absoluto y tranquilidad financiera a tu empresa.
+            Soluciones contables, tributarias y laborales robustas e integradas, diseñadas para brindar cumplimiento absoluto y tranquilidad financiera a tu empresa en Chile.
           </p>
         </div>
 
