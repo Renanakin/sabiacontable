@@ -13,7 +13,7 @@ export default function ServicesDesktop() {
             Nuestros Servicios de <span className="text-[#d80073]">Asesoría Especializada</span>
           </h2>
           <p className="text-slate-400 text-base">
-            Soluciones adaptadas a la medida de tu negocio, con acompañamiento constante y reportería transparente.
+            Ordenamos la gestión contable, laboral y tributaria de tu empresa, para que operes con tranquilidad y tomes mejores decisiones.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function ServicesDesktop() {
                 <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{service.shortDescription}</p>
                 <ul className="space-y-2.5 pt-2">
-                  {service.bullets.slice(0, 3).map((bullet, idx) => (
+                  {(service.homeBullets || service.bullets).slice(0, 3).map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
                       <CheckCircle2 size={14} className="text-[#d80073] shrink-0 mt-0.5" />
                       <span>{bullet}</span>

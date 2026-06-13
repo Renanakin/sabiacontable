@@ -9,14 +9,6 @@ export default function FinancialBar() {
     return new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 2 }).format(val);
   };
 
-  if (error) {
-    return (
-      <div className="w-full bg-[#0a192f] border-t border-white/5 py-3 text-center text-xs text-slate-400">
-        Indicadores referenciales (Fallback): UF {formatCurrency(uf)} | UTM {formatCurrency(utm)}
-      </div>
-    );
-  }
-
   return (
     <div className="w-full bg-[#032030] border-t border-b border-white/5 py-4 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 shadow-[inset_0_0_30px_rgba(0,0,0,0.3)]">
       <div className="flex items-center gap-2.5">

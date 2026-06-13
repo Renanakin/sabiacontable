@@ -20,18 +20,25 @@ export function useMindicador() {
 
   useEffect(() => {
     async function fetchIndicators() {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
       try {
-        const res = await fetch("https://mindicador.cl/api");
+        const res = await fetch("https://mindicador.cl/api", { signal: controller.signal });
+        clearTimeout(timeoutId);
+        
         if (!res.ok) throw new Error("Error en API mindicador");
+        
         const data = await res.json();
         setIndicators({
-          uf: data.uf.valor,
-          utm: data.utm.valor,
-          dolar: data.dolar.valor,
+          uf: data.uf?.valor || CONSTANTS.UF,
+          utm: data.utm?.valor || CONSTANTS.UTM,
+          dolar: data.dolar?.valor || 890,
           loading: false,
           error: false,
         });
       } catch (err) {
+        clearTimeout(timeoutId);
         console.error("Error cargando mindicador:", err);
         setIndicators((prev) => ({ ...prev, loading: false, error: true }));
       }

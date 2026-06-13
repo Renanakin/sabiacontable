@@ -96,7 +96,7 @@ export default function Footer() {
               <Link href="/servicios/creacion-de-empresa" className="hover:text-white transition-colors">Creación de Empresa</Link>
             </li>
             <li>
-              <Link href="/servicios/auditoria-financiera" className="hover:text-white transition-colors">Auditoría Financiera</Link>
+              <Link href="/servicios/auditoria-financiera" className="hover:text-white transition-colors">Auditoría y Control</Link>
             </li>
           </ul>
         </div>

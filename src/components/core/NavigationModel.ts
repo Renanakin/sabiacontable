@@ -1,4 +1,4 @@
-import { Home, Briefcase, Calculator, Phone, Users, FileText } from "lucide-react";
+import { Home, Briefcase, Calculator, Phone, Users, FileText, Handshake } from "lucide-react";
 
 // Menú principal de navegación
 export const navItems = [
@@ -15,8 +15,8 @@ export const servicesItems = [
   { label: "Contabilidad Integral", path: "/servicios/contabilidad-integral", icon: Briefcase },
   { label: "Gestión de Remuneraciones", path: "/servicios/gestion-de-remuneraciones", icon: Users },
   { label: "Gestión Tributaria", path: "/servicios/gestion-tributaria", icon: FileText },
-  { label: "Creación de Empresa", path: "/servicios/creacion-de-empresa", icon: Briefcase },
-  { label: "Auditoría Financiera", path: "/servicios/auditoria-financiera", icon: Calculator },
+  { label: "Creación de Empresa", path: "/servicios/creacion-de-empresa", icon: Handshake },
+  { label: "Auditoría y Control", path: "/servicios/auditoria-financiera", icon: Calculator },
 ];
 
 // Submenú de Utilitarios

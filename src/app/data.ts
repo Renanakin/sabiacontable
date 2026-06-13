@@ -19,14 +19,15 @@ export interface ServiceItem {
   features: string[];
   seoLongTailContent?: string;
   image: string;
+  homeBullets?: string[];
 }
 
 export const servicesData: ServiceItem[] = [
   {
     slug: "contabilidad-integral",
     title: "Contabilidad Integral",
-    shortDescription: "Mantén tus finanzas al día y sin errores. Te asignamos un analista dedicado que conoce tu empresa y te entrega reportes contables precisos y actualizados para la toma de decisiones estratégicas, garantizando siempre el cumplimiento ante el SII.",
-    fullDescription: "Nos encargamos del ciclo completo de tu contabilidad para que puedas enfocarte en hacer crecer tu negocio sin preocuparte del papeleo. Conciliamos tus cuentas y mantenemos tus libros actualizados bajo la normativa vigente.",
+    shortDescription: "Nos encargamos de tu contabilidad para que tengas orden, control y claridad en tu empresa.",
+    fullDescription: "Nos encargamos de tu contabilidad para que tengas orden, control y claridad en tu empresa. Mantenemos tu información actualizada, cumplimos con la normativa vigente y te entregamos herramientas para tomar mejores decisiones.",
     bullets: [
       "Asesoría contable continua.",
       "Externalización en el área de contabilidad.",
@@ -36,23 +37,28 @@ export const servicesData: ServiceItem[] = [
       "Contraloría contable y tributaria.",
       "Planes contables personalizados."
     ],
-    features: [
-      "Reportes en tiempo real",
-      "Asignación de analista dedicado",
-      "Reuniones de revisión mensual"
+    homeBullets: [
+      "Gestión contable mensual y cierre oportuno",
+      "Declaraciones de impuestos mensuales y anuales",
+      "Información financiera clara para la toma de decisiones"
     ],
-    seoLongTailContent: `### ¿Por qué externalizar tu contabilidad con expertos?
+    features: [
+      "Información contable actualizada y disponible para tu gestión",
+      "Un equipo que conoce tu empresa y te acompaña de forma constante",
+      "Comunicación directa y seguimiento periódico"
+    ],
+    /* seoLongTailContent: `### ¿Por qué externalizar tu contabilidad con expertos?
 Llevar la contabilidad interna consume recursos valiosos y aumenta el riesgo de errores tributarios. Nuestro servicio de contabilidad integral en Chile está diseñado para que tu pyme mantenga sus finanzas en orden sin esfuerzo.
 
 ### Nuestro proceso contable mensual
-Nos conectamos directamente con tus plataformas de facturación para automatizar la captura de datos. Desde la centralización de compras y ventas hasta el análisis de ratios financieros, cubrimos todo el espectro para que puedas presentar balances impecables ante bancos y accionistas.`,
-    image: "/images/contabilidad.png"
+Nos conectamos directamente con tus plataformas de facturación para automatizar la captura de datos. Desde la centralización de compras y ventas hasta el análisis de ratios financieros, cubrimos todo el espectro para que puedas presentar balances impecables ante bancos y accionistas.`, */
+    image: "/images/contabilidad_integral.png"
   },
   {
     slug: "gestion-de-remuneraciones",
     title: "Gestión de Remuneraciones",
-    shortDescription: "Cuidamos del motor de tu empresa. Gestionamos nóminas, contratos, finiquitos y pago de cotizaciones (PreviRed) de forma ágil, blindando tu negocio y asegurando un cumplimiento estricto ante la Dirección del Trabajo.",
-    fullDescription: "Administramos tu personal de manera eficiente y transparente, asegurando el cumplimiento estricto de la legislación laboral chilena y evitando multas de la Dirección del Trabajo.",
+    shortDescription: "Administramos tus remuneraciones con orden y cumplimiento, para que tu empresa funcione sin contingencias laborales.",
+    fullDescription: "Administramos tus remuneraciones con orden y cumplimiento, para que tu empresa funcione sin contingencias laborales. Nos encargamos de los procesos clave y te apoyamos para que tengas claridad y control sobre tu gestión de personas.",
     bullets: [
       "Confección de remuneraciones (Rol General).",
       "Rol Privado de Remuneraciones (informe confidencial para gerencia).",
@@ -64,22 +70,27 @@ Nos conectamos directamente con tus plataformas de facturación para automatizar
       "Contraloría de remuneraciones."
     ],
     features: [
-      "Libro de Remuneraciones Electrónico (LRE)",
-      "Portal auto-consulta para trabajadores",
-      "Asesoría legal laboral integrada"
+      "Proceso de remuneraciones ordenado y al día",
+      "Acompañamiento en la gestión y dudas laborales",
+      "Comunicación directa con tu consultor asignado"
     ],
-    seoLongTailContent: `### Evita multas de la Dirección del Trabajo
+    homeBullets: [
+      "Procesamiento mensual de remuneraciones",
+      "Contratos, finiquitos y gestión laboral",
+      "Cumplimiento previsional y legal al día"
+    ],
+    /* seoLongTailContent: `### Evita multas de la Dirección del Trabajo
 El cálculo incorrecto de sueldos, finiquitos o cotizaciones en PreviRed puede resultar en graves penalizaciones. Delegar la gestión de remuneraciones asegura precisión técnica y cumplimiento normativo.
 
 ### Soluciones completas para Recursos Humanos
-No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacción de anexos de contratos, control de vacaciones, cálculo de horas extras y representación ante fiscalizaciones, brindando soporte integral a tu área de recursos humanos.`,
-    image: "/images/remuneraciones.png"
+No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacción de anexos de contratos, control de vacaciones, cálculo de horas extras y representación ante fiscalizaciones, brindando soporte integral a tu área de recursos humanos.`, */
+    image: "/images/remuneraciones_realista.png"
   },
   {
     slug: "gestion-tributaria",
     title: "Gestión Tributaria",
-    shortDescription: "Planificamos tu carga fiscal con visión estratégica. Optimizamos tus recursos, protegemos tu patrimonio y nos encargamos de las declaraciones de renta e IVA mensual, manteniéndote siempre en regla y libre de contingencias ante el SII.",
-    fullDescription: "Optimizamos tu carga tributaria de manera legal y ética. Nos encargamos de presentar tus impuestos en las fechas correspondientes para evitar multas o reparos por parte del SII.",
+    shortDescription: "Optimizamos tu gestión tributaria con un enfoque claro y ordenado, para que tu empresa cumpla con la normativa y evite contingencias.",
+    fullDescription: "Optimizamos tu gestión tributaria con un enfoque claro y ordenado, para que tu empresa cumpla con la normativa y evite contingencias. Te acompañamos en el cumplimiento y análisis tributario para que tomes decisiones con mayor seguridad.",
     bullets: [
       "Asesoría y optimización tributaria.",
       "Confección mensual de cierres tributarios.",
@@ -88,22 +99,27 @@ No solo procesamos las liquidaciones a fin de mes. Te asesoramos en la redacció
       "Estudio y análisis tributario."
     ],
     features: [
-      "Simulaciones previas al cierre de año",
-      "Defensa y representación ante el SII",
-      "Monitoreo constante de cambios normativos"
+      "Gestión tributaria ordenada y al día",
+      "Acompañamiento en decisiones y situaciones tributarias",
+      "Comunicación directa con tu consultor asignado"
     ],
-    seoLongTailContent: `### Estrategia y Planificación Tributaria en Chile
+    homeBullets: [
+      "Declaraciones mensuales y anuales al día",
+      "Asesoría en cumplimiento y gestión tributaria",
+      "Análisis para apoyar la toma de decisiones"
+    ],
+    /* seoLongTailContent: `### Estrategia y Planificación Tributaria en Chile
 Pagar más impuestos de lo justo por desconocimiento de las franquicias legales es un error común. Nuestros expertos tributarios analizan el régimen fiscal de tu empresa para aplicar estrategias legales de ahorro y eficiencia.
 
 ### Declaraciones de Renta sin contratiempos
-La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extremo. Nos adelantamos a los plazos del SII para detectar discrepancias, realizar el cruce de información y garantizar una declaración libre de contingencias o fiscalizaciones sorpresivas.`,
-    image: "/images/tributaria.png"
+La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extremo. Nos adelantamos a los plazos del SII para detectar discrepancias, realizar el cruce de información y garantizar una declaración libre de contingencias o fiscalizaciones sorpresivas.`, */
+    image: "/images/tributaria_realista.png"
   },
   {
     slug: "creacion-de-empresa",
     title: "Creación de Empresa",
-    shortDescription: "Te acompañamos desde la idea hasta tu primera venta. Formalizamos y constituimos tu negocio rápidamente, evitando errores burocráticos y asesorándote para escoger el régimen tributario más beneficioso para tu Pyme.",
-    fullDescription: "Te acompañamos desde la idea inicial hasta el primer día de facturación. Hacemos que la constitución y formalización de tu empresa sea rápida, guiada y sin errores burocráticos.",
+    shortDescription: "Te acompañamos en la creación de tu empresa de forma clara y ordenada, para que partas sin errores y con una base sólida.",
+    fullDescription: "Te acompañamos en la creación de tu empresa de forma clara y ordenada, para que partas sin errores y con una base sólida. Te asesoramos en cada paso para que tomes buenas decisiones desde el inicio.",
     bullets: [
       "Escritura Pública.",
       "Inscripción en el Registro de Comercio.",
@@ -115,22 +131,27 @@ La Operación Renta anual y las Declaraciones Juradas previas exigen rigor extre
       "Inscripción Factura electrónica."
     ],
     features: [
-      "Habilitación de facturación electrónica",
-      "Asesoría en elección del régimen tributario",
-      "Tramitación de patente comercial"
+      "Proceso de constitución claro y guiado paso a paso",
+      "Asesoría en la elección de estructura y régimen tributario",
+      "Comunicación directa con tu consultor asignado"
     ],
-    seoLongTailContent: `### Emprende con bases sólidas desde el día 1
+    homeBullets: [
+      "Constitución y formalización de empresa",
+      "Asesoría en estructura y régimen tributario",
+      "Inicio de actividades y habilitación para facturar"
+    ],
+    /* seoLongTailContent: `### Emprende con bases sólidas desde el día 1
 Constituir una empresa requiere elegir la figura societaria correcta (SpA, EIRL, Limitada) y el régimen tributario adecuado. Una mala elección inicial puede costar millones en impuestos futuros. Nosotros te asesoramos paso a paso.
 
 ### Más que 'Tu Empresa en un Día'
-Si bien la plataforma del Estado facilita el registro, el proceso real incluye inicio de actividades, acreditación de domicilio, verificación de actividades ante el SII y obtención de patentes municipales. Nos encargamos de todo el ecosistema burocrático para que empieces a facturar rápidamente.`,
-    image: "/images/creacion.png"
+Si bien la plataforma del Estado facilita el registro, el proceso real incluye inicio de actividades, acreditación de domicilio, verificación de actividades ante el SII y obtención de patentes municipales. Nos encargamos de todo el ecosistema burocrático para que empieces a facturar rápidamente.`, */
+    image: "/images/creacion_realista.png"
   },
   {
     slug: "auditoria-financiera",
-    title: "Auditoría Financiera",
-    shortDescription: "Evaluación objetiva y profunda de tus estados financieros. Auditamos y certificamos la salud corporativa de tu empresa bajo normas IFRS, otorgando total transparencia para bancos, socios, inversionistas e instituciones financieras.",
-    fullDescription: "Revisamos tus registros para certificar que reflejen fielmente la realidad financiera de tu empresa. Ideal para presentar ante bancos, inversionistas o para el control interno de socios.",
+    title: "Auditoría Financiera y Tributaria",
+    shortDescription: "Evaluamos la información financiera y tributaria de tu empresa para entregarte una visión clara y confiable de su situación.",
+    fullDescription: "Evaluamos la información financiera y tributaria de tu empresa para entregarte una visión clara y confiable de su situación. Te ayudamos a detectar riesgos, validar tus procesos y fortalecer el control para una mejor toma de decisiones.",
     bullets: [
       "Auditoría Estados Financieros.",
       "Auditoría Tributaria.",
@@ -141,16 +162,21 @@ Si bien la plataforma del Estado facilita el registro, el proceso real incluye i
       "Revisión de procesos."
     ],
     features: [
-      "Certificación para entidades financieras",
-      "Análisis profundo de brechas contables",
-      "Propuestas de mejora interna"
+      "Evaluación independiente y objetiva de tu información",
+      "Identificación de riesgos y puntos de mejora",
+      "Comunicación directa con tu consultor asignado"
     ],
-    seoLongTailContent: `### Transparencia que genera confianza
+    homeBullets: [
+      "Auditoría de estados financieros",
+      "Auditoría tributaria",
+      "Revisión de procesos y control interno"
+    ],
+    /* seoLongTailContent: `### Transparencia que genera confianza
 Una auditoría financiera externa valida la veracidad de tus estados financieros. Es una herramienta indispensable si buscas rondas de inversión, créditos bancarios de alto volumen o si hay reestructuración de socios en la empresa.
 
 ### Detección de riesgos y mejora de procesos operativos
-Más allá de certificar los números, nuestra auditoría bajo normas IFRS revisa tu sistema de control interno. Identificamos puntos vulnerables al fraude, ineficiencias en el flujo de caja y entregamos reportes accionables para mejorar la salud corporativa de tu pyme.`,
-    image: "/images/auditoria.png"
+Más allá de certificar los números, nuestra auditoría bajo normas IFRS revisa tu sistema de control interno. Identificamos puntos vulnerables al fraude, ineficiencias en el flujo de caja y entregamos reportes accionables para mejorar la salud corporativa de tu pyme.`, */
+    image: "/images/auditoria_realista.png"
   }
 ];
 
@@ -228,7 +254,8 @@ export const teamData: TeamMember[] = [
     shortDesc: "Contador Auditor y Magíster en Tributación con más de 18 años de experiencia en asesoría empresarial.",
     bio: "### Mi Rol en Sabia Contable\nLidero la estrategia y supervisión integral de los servicios contables, tributarios, laborales y financieros, apoyando a nuestros clientes en la toma de decisiones y en el cumplimiento eficiente de sus obligaciones.\n\n### Perfil Profesional\nContador Auditor y Magíster en Tributación con más de 18 años de experiencia en asesoría empresarial. Especializado en contabilidad, tributación y control de gestión, enfoco mi trabajo en entregar soluciones estratégicas, combinando conocimiento técnico con una visión de negocio orientada a resultados.",
     linkedin: "https://www.linkedin.com/in/jorge-ernesto-astorga-mendez-1a53b956/",
-    image: "/images/equipo/jorge.webp"
+    image: "/images/equipo/jorge.webp",
+    objectPosition: "center 30%"
   },
   {
     id: "lizbet",
@@ -265,12 +292,13 @@ export const teamData: TeamMember[] = [
     image: "/images/equipo/katherine.webp"
   },
   {
-    id: "wendy",
-    name: "Wendy Parra Freitez",
+    id: "anais",
+    name: "Anaís Belén Álvarez Sáez",
     role: "Soporte Administrativo",
-    shortDesc: "Técnico en Organización Empresarial con experiencia en labores administrativas y gestión documental.",
-    bio: "### Acerca de su Rol\nBrinda apoyo a la gestión administrativa y operativa de Sabia Contable, colaborando en la organización de documentación, coordinación de procesos internos y seguimiento de tareas que contribuyen al correcto funcionamiento del equipo.\n\n### Perfil Profesional\nTécnico en Organización Empresarial con experiencia en labores administrativas y gestión documental. Se caracteriza por su organización, responsabilidad y orientación al cumplimiento de procesos, aportando apoyo permanente a las operaciones internas de la empresa.",
-    image: "/images/equipo/wendy.webp"
+    shortDesc: "Técnico en Contabilidad en formación, con experiencia en apoyo a procesos administrativos y contables.",
+    bio: "### Mi Rol en Sabia Contable\nApoyo la gestión administrativa, contable y de remuneraciones de la empresa, coordinando procesos de facturación, cobranza, control documental y atención a clientes, contribuyendo al orden, cumplimiento de plazos y correcto funcionamiento operativo del equipo.\n\n### Perfil Profesional\nTécnico en Contabilidad en formación, con experiencia en apoyo a procesos administrativos y contables. Me caracterizo por mi organización, responsabilidad y orientación al cliente, contribuyendo a mantener una gestión ordenada, eficiente y confiable dentro de la empresa.",
+    image: "/images/equipo/anais.png",
+    objectPosition: "center 20%"
   }
 ];
 

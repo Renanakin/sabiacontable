@@ -18,10 +18,10 @@ export default function Servicios() {
         <div className="space-y-4 text-center max-w-3xl mx-auto">
           <span className="text-[#d80073] text-sm font-semibold tracking-wider uppercase">Nuestras Especialidades</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl min-[1920px]:text-6xl font-extrabold text-white tracking-tight">
-            Servicios Profesionales
+            Servicios que ordenan y hacen crecer tu empresa
           </h1>
           <p className="text-slate-400 text-lg">
-            Soluciones contables, tributarias y laborales robustas e integradas, diseñadas para brindar cumplimiento absoluto y tranquilidad financiera a tu empresa en Chile.
+            Acompañamos la contabilidad, remuneraciones y gestión tributaria de tu empresa, con foco en orden, cumplimiento y claridad para la toma de decisiones.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Servicios() {
                     {service.shortDescription}
                   </p>
                   <ul className="space-y-2 pt-2">
-                    {service.bullets.slice(0, 3).map((bullet, idx) => (
+                    {(service.homeBullets || service.bullets).slice(0, 3).map((bullet, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
                         <CheckCircle2 size={14} className="text-[#d80073] shrink-0 mt-0.5" />
                         <span>{bullet}</span>

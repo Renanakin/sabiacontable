@@ -10,8 +10,14 @@ export default function CtaMobile() {
         <PhoneCall size={14} className="text-[#E30080]" />
         <span>Conversa con un consultor directamente</span>
       </div>
-      <h2 className="text-3xl font-extrabold text-white mb-5">Profesionalismo y <span className="text-[#E30080]">Resultados</span></h2>
-      <p className="text-slate-400 text-sm mb-8">Desde nuestros inicios hemos mantenido un firme compromiso con el crecimiento de las Pymes chilenas. Más que un proveedor contable, somos el aliado que tu negocio necesita para escalar de forma segura.</p>
+      <h2 className="text-3xl font-extrabold text-white mb-5">Un equipo que ordena <span className="text-[#E30080]">y respalda tu empresa</span></h2>
+      <p className="text-slate-400 text-sm mb-8">
+        En Sabia Contable trabajamos con empresas que necesitan mantener su gestión en orden, cumplir con la normativa y evitar errores que afecten su operación.
+        <br />
+        Nos involucramos en tu día a día para que tengas claridad, control y respaldo en cada decisión.
+        <br />
+        Más que un servicio contable, somos un apoyo real para que tu empresa funcione de forma segura y sin complicaciones.
+      </p>
       <Link
         href="/contacto"
         className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#E30080] text-white font-bold w-full shadow-lg shadow-[#E30080]/20"

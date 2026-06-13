@@ -15,7 +15,7 @@ A continuación, la propuesta optimizada para la página de Inicio:
 
 **Propuesta Optimizada (SEO):**
 > **Título:** ¡Lleva la Contabilidad de tu Empresa al Siguiente Nivel!
-> **Subtítulo:** Tu tranquilidad contable y tributaria comienza aquí. En **Sabia Contable**, estudio contable líder para Pymes en Chile, convertimos los desafíos financieros y laborales en soluciones claras y efectivas. Te acompañamos con asesoría experta, cercana y 100% transparente para que tomes decisiones estratégicas con total confianza.
+> **Subtítulo:** Tu tranquilidad contable y tributaria comienza aquí. En **Sabia Contable**, estudio contable líder para Empresas y Pymes en Chile, convertimos los desafíos financieros y laborales en soluciones claras y efectivas. Te acompañamos con asesoría experta, cercana y 100% transparente para que tomes decisiones estratégicas con total confianza.
 
 ---
 

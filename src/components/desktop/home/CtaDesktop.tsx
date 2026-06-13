@@ -12,13 +12,15 @@ export default function CtaDesktop() {
           <span>¿Tienes dudas? Conversa con un consultor directamente</span>
         </div>
         <h2 className="text-2xl sm:text-3xl lg:text-5xl min-[1920px]:text-6xl font-extrabold text-white tracking-tight leading-tight">
-          Profesionalismo, Compromiso <br />
-          <span className="text-[#E30080]">y Resultados</span>
+          Un equipo que ordena <br />
+          <span className="text-[#E30080]">y respalda tu empresa</span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto mt-4 text-sm sm:text-base leading-relaxed">
-          Desde nuestros inicios, en Sabia Contable hemos mantenido un firme compromiso con el profesionalismo, la excelencia y el crecimiento de las Pymes chilenas. Cada asesoría está respaldada por un equipo de especialistas que trabajan con rigurosidad técnica y visión estratégica.
-          <br /><br />
-          Más que un proveedor contable, somos el aliado que tu negocio necesita para escalar de forma segura y sostenible.
+          En Sabia Contable trabajamos con empresas que necesitan mantener su gestión en orden, cumplir con la normativa y evitar errores que afecten su operación.
+          <br />
+          Nos involucramos en tu día a día para que tengas claridad, control y respaldo en cada decisión.
+          <br />
+          Más que un servicio contable, somos un apoyo real para que tu empresa funcione de forma segura y sin complicaciones.
         </p>
         <div className="pt-8">
           <Link
